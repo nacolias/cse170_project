@@ -15,3 +15,17 @@
     background-color: #F9F9F0;
 }
 
+.person .button{
+    width: 10em;
+    background: gray;
+    border:none;
+}
+
+.profilePic{
+    height: 20em;
+    overflow:hidden;
+}
+
+.profilePic img{
+    width:100%;
+}
