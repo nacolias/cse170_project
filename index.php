@@ -64,15 +64,149 @@
               <section class="main-section"> 
                     <div class="person">
                         <div class="row">
-
-                        </div> 
-
-                        <div class="row">
-                            
+                            <div class="small-centered small-8 columns">
+                                <h4 class="center"> Tim Holloway </h4>
+                            </div>
                         </div>
                         
                         <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <img src="img/guy1.jpg" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <center><h4>Flake Rate: 20%</h4></center>
+                            </div>
+                        </div>
                         
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <center><h4>Free Until: 6:00 PM</h4></center>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="small-centered small-10 columns">
+                                <center>
+                                    <ul class="small round button-group"
+                                        <li><a href="#" class="small button">SMS</a></li>
+                                        <li><a href="#" class="small button">Facebook</a></li>
+                                    </ul>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+          
+                    <div class="person">
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <h4 class="center"> Tim Holloway </h4>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <img src="img/guy2.jpg" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <center><h4>Flake Rate: 20%</h4></center>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <center><h4>Free Until: 6:00 PM</h4></center>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="small-centered small-10 columns">
+                                <center>
+                                    <ul class="small round button-group"
+                                        <li><a href="#" class="small button">SMS</a></li>
+                                        <li><a href="#" class="small button">Facebook</a></li>
+                                    </ul>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="person">
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <h4 class="center"> Tim Holloway </h4>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <img src="img/girl1.jpg" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <center><h4>Flake Rate: 20%</h4></center>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <center><h4>Free Until: 6:00 PM</h4></center>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="small-centered small-10 columns">
+                                <center>
+                                    <ul class="small round button-group"
+                                        <li><a href="#" class="small button">SMS</a></li>
+                                        <li><a href="#" class="small button">Facebook</a></li>
+                                    </ul>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="person">
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <h4 class="center"> Tim Holloway </h4>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <img src="img/guy4.jpg" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <center><h4>Flake Rate: 20%</h4></center>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="small-centered small-8 columns">
+                                <center><h4>Free Until: 6:00 PM</h4></center>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="small-centered small-10 columns">
+                                <center>
+                                    <ul class="small round button-group"
+                                        <li><a href="#" class="small button">SMS</a></li>
+                                        <li><a href="#" class="small button">Facebook</a></li>
+                                    </ul>
+                                </center>
+                            </div>
                         </div>
                     </div>
               </section> 
