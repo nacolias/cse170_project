@@ -77,13 +77,13 @@
 
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Flake Rate: 20%</h4></center>
+                                <center><h4>Flake Rate: 35%</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Free Until: 6:00 PM</h4></center>
+                                <center><h4>Free Until: 5:00 PM</h4></center>
                             </div>
                         </div>
                         
@@ -102,7 +102,7 @@
                     <div class="person">
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <h4 class="center"> Tim Holloway </h4>
+                                <h4 class="center"> Ben Dover </h4>
                             </div>
                         </div>
                         
@@ -114,13 +114,13 @@
 
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Flake Rate: 20%</h4></center>
+                                <center><h4>Flake Rate: 11%</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Free Until: 6:00 PM</h4></center>
+                                <center><h4>Free Until: 3:00 AM</h4></center>
                             </div>
                         </div>
                         
@@ -139,7 +139,7 @@
                     <div class="person">
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <h4 class="center"> Tim Holloway </h4>
+                                <h4 class="center"> Mike Hawk </h4>
                             </div>
                         </div>
                         
@@ -151,13 +151,13 @@
 
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Flake Rate: 20%</h4></center>
+                                <center><h4>Flake Rate: 99%</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Free Until: 6:00 PM</h4></center>
+                                <center><h4>Free Until: 12:00 PM</h4></center>
                             </div>
                         </div>
                         
@@ -176,7 +176,7 @@
                     <div class="person">
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <h4 class="center"> Tim Holloway </h4>
+                                <h4 class="center"> Michael Taures </h4>
                             </div>
                         </div>
                         
@@ -188,13 +188,13 @@
 
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Flake Rate: 20%</h4></center>
+                                <center><h4>Flake Rate: 14%</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Free Until: 6:00 PM</h4></center>
+                                <center><h4>Free Until: 10:30 AM</h4></center>
                             </div>
                         </div>
                         
