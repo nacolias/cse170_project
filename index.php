@@ -6,6 +6,9 @@
     <title>Time Space</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="img/font-awesome-4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/timespace.css">
+
   </head>
   <body>
     
@@ -14,9 +17,8 @@
           <div class="inner-wrap"> 
               <nav class="tab-bar sticky"> 
                   <section class="left-small"> 
-                      <a class="left-off-canvas-toggle menu-icon" href="#">
+                      <a class="left-off-canvas-toggle fa fa-users fa-1p5x" href="#">
                           <span>
-                              
                           </span>
                       </a> 
                   </section> 
@@ -24,7 +26,7 @@
                       <h1 class="title">Time Space</h1> 
                   </section> 
                   <section class="right-small"> 
-                      <a class="right-off-canvas-toggle menu-icon" href="#">
+                      <a class="right-off-canvas-toggle fa fa-cog fa-1p5x" href="#">
                           <span>
                           </span>
                       </a> 
@@ -36,7 +38,7 @@
                           <label>Network</label>
                       </li> 
                       <li>
-                          <a href="#">All UCSD</a>
+                          <<a href="#">All UCSD</a>
                       </li> 
                       <li>
                           <a href="#">Just Friends</a>
@@ -65,32 +67,32 @@
                     <div class="person">
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <h4 class="center"> Tim Holloway </h4>
+                                <h4>Tim Holloway </h4>
                             </div>
                         </div>
                         
                         <div class="row">
-                            <div class="small-centered small-8 columns">
-                                <img src="img/guy1.jpg" />
+                            <div class="small-centered small-8 columns profilePic">
+                                <img src="img/guy2.jpg" />
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Flake Rate: 35%</h4></center>
+                                <center><h4>Flake Rate: 20%</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Free Until: 5:00 PM</h4></center>
+                                <center><h4>Free Until: 6:00 PM</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-10 columns">
                                 <center>
-                                    <ul class="small round button-group"
+                                    <ul class="small button-group"
                                         <li><a href="#" class="small button">SMS</a></li>
                                         <li><a href="#" class="small button">Facebook</a></li>
                                     </ul>
@@ -102,32 +104,32 @@
                     <div class="person">
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <h4 class="center"> Ben Dover </h4>
+                                <h4>Tim Holloway </h4>
                             </div>
                         </div>
                         
                         <div class="row">
-                            <div class="small-centered small-8 columns">
-                                <img src="img/guy2.jpg" />
+                            <div class="small-centered small-8 columns profilePic">
+                                <img src="img/guy5.jpg" />
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Flake Rate: 11%</h4></center>
+                                <center><h4>Flake Rate: 20%</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Free Until: 3:00 AM</h4></center>
+                                <center><h4>Free Until: 6:00 PM</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-10 columns">
                                 <center>
-                                    <ul class="small round button-group"
+                                    <ul class="small button-group"
                                         <li><a href="#" class="small button">SMS</a></li>
                                         <li><a href="#" class="small button">Facebook</a></li>
                                     </ul>
@@ -139,32 +141,32 @@
                     <div class="person">
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <h4 class="center"> Mike Hawk </h4>
+                                <h4 class="center">Tim Holloway </h4>
                             </div>
                         </div>
                         
                         <div class="row">
-                            <div class="small-centered small-8 columns">
+                            <div class="small-centered small-8 columns profilePic">
                                 <img src="img/girl1.jpg" />
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Flake Rate: 99%</h4></center>
+                                <center><h4>Flake Rate: 20%</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Free Until: 12:00 PM</h4></center>
+                                <center><h4>Free Until: 6:00 PM</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-10 columns">
                                 <center>
-                                    <ul class="small round button-group"
+                                    <ul class="small button-group"
                                         <li><a href="#" class="small button">SMS</a></li>
                                         <li><a href="#" class="small button">Facebook</a></li>
                                     </ul>
@@ -176,32 +178,32 @@
                     <div class="person">
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <h4 class="center"> Michael Taures </h4>
+                                <h4>Tim Holloway </h4>
                             </div>
                         </div>
                         
                         <div class="row">
-                            <div class="small-centered small-8 columns">
+                            <div class="small-centered small-8 columns profilePic">
                                 <img src="img/guy4.jpg" />
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Flake Rate: 14%</h4></center>
+                                <center><h4>Flake Rate: 20%</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-8 columns">
-                                <center><h4>Free Until: 10:30 AM</h4></center>
+                                <center><h4>Free Until: 6:00 PM</h4></center>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="small-centered small-10 columns">
                                 <center>
-                                    <ul class="small round button-group"
+                                    <ul class="small button-group"
                                         <li><a href="#" class="small button">SMS</a></li>
                                         <li><a href="#" class="small button">Facebook</a></li>
                                     </ul>
