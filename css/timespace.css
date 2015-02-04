@@ -33,13 +33,11 @@
     width:100%;
 }
 
-#nav{
-    background-color: gray;
+.top-bar{
+    box-shadow: 1px 3px 5px black;
 }
 
 .top-bar .fa{
-    padding-top: .2em;
     color:white;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding:.2em 5% 0 5%;
 }
