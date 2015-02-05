@@ -33,13 +33,10 @@
     width:100%;
 }
 
-#nav{
-    background-color: gray;
+.top-bar{
 }
 
 .top-bar .fa{
-    padding-top: .2em;
     color:white;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding:.2em 5% 0 5%;
 }
