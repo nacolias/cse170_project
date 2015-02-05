@@ -40,12 +40,16 @@
      	<div class="person">
             <div class="row">
                 <div class="small-centered small-8 columns">
-                    <div class="small-4 columns">
-                        <h4 class="text-left">Tim Holloway</h4>
-                    </div>
-                    <div class="small-4 columns">
-                        <h4 class="text-right">Age:24 CSE</h4>
-                    </div>
+                    <h4 class="text-left left">Tim Holloway</h4>
+                </div>
+            </div>
+            <div class="row details">
+                <div class="small-centered small-8 columns">
+                    <h4 class="text-left left">
+                        <small>
+                            Major:Computer Engineering, 6th Year
+                        </small>
+                    </h4>
                 </div>
             </div>
             
