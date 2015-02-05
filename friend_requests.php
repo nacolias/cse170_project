@@ -30,23 +30,22 @@
 	</div>
     <!--Main Body-->
     <div id="main_body">
-        <div>
-        </div>
+        <!--SPACER-->
         <div class="row">
             <div class="small-centered small-10 columns">
                 <hr />
             </div>
         </div>
-
+        <!--PEOPLE-->
      	<div class="person">
             <div class="row">
-                <div class="small-4 columns">
-                    <h4>Tim Holloway</h4>
-                </div>
-                <div class="small-4 columns">
-                </div>
-                <div class="small-4 columns">
-                    <h4>Age:24 CSE</h4>
+                <div class="small-centered small-8 columns">
+                    <div class="small-4 columns">
+                        <h4 class="text-left">Tim Holloway</h4>
+                    </div>
+                    <div class="small-4 columns">
+                        <h4 class="text-right">Age:24 CSE</h4>
+                    </div>
                 </div>
             </div>
             
