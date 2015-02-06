@@ -20,7 +20,7 @@
 				    	<center>
 				    		<i class="fa fa-users fa-2x"></i>
 							<i class="fa fa-search fa-2x"></i>
-							<i class="fa fa-home fa-2x"></i>
+							<a href="index.php"><i class="fa fa-home fa-2x"></i></a>
 							<i class="fa fa-user-plus fa-2x"></i>
 							<i class="fa fa-gear fa-2x"></i>
 						</center>
@@ -58,12 +58,16 @@
             </div>
             <div class="row">
                 <div class="small-centered small-8 columns">
-                    <div class="small-4 columns">
-                        <h5 class="text-left">Tim Holloway</h5>
-                    </div>
-                    <div class="small-4 columns">
-                        <h5 class="text-right">Age:24 CSE</h5>
-                    </div>
+                    <h4 class="text-left left">Tim Holloway</h4>
+                </div>
+            </div>
+            <div class="row details">
+                <div class="small-centered small-8 columns">
+                    <h4 class="text-left left">
+                        <small>
+                            Major:Computer Engineering, 6th Year
+                        </small>
+                    </h4>
                 </div>
             </div>
             
@@ -79,14 +83,13 @@
             </div>
             
             <div class="row">
-                <div class="small-centered small-8 columns">
+                <div class="small-centered small-8 columns buttonarea">
 <!--                    <ul class="stack button-group even-2">
                             <li><a href="#" class="button expand alert">DENY</a></li>
                             <li><a href="#" class="button expand success">ACCEPT</a></li>
                         </ul> -->
-                        <a href="#" class="small radius button success left" style="width:45%">Accept</a>
-                        <a href="#" class="small radius button alert right" style="width:45%">Deny</a>
-
+                        <a href="#" class="small radius button success left">Accept</a>
+                        <a href="#" class="small radius button alert right">Deny</a>
                 </div>
             </div>
         </div>
