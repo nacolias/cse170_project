@@ -22,7 +22,7 @@
                             <i class="fa fa-search fa-2x"></i>
                             <a href="index.php"><i class="fa fa-home fa-2x"></i></a>
                             <a href="friend_requests.php"><i class="fa fa-user-plus fa-2x"></i></a>
-                            <a href="settings.html"><i class="fa fa-gear fa-2x"></i></a>
+                            <a href="settings.php"><i class="fa fa-gear fa-2x"></i></a>
 						</center>
 					</div>
 				</div>
