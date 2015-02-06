@@ -30,6 +30,21 @@
 	</div>
     <!--Main Body-->
     <div id="main_body">
+        <!--Your Pending Requests-->
+        <div id="your_requests" class="pending_for_you">
+            <div class="row">
+                <h4 class="text-center">Your Pending Requests</h4>
+            </div>
+            <div class="row">
+                <div class="small-centered small-10 columns alert-box [radius round]" data-alert>Jessica | Age:22 | CSE<a href="#" class="close">&times;</a></div>
+            </div>
+            <div class="row">
+                <div class="small-centered small-10 columns alert-box [radius round]" data-alert>Greg | Age:25 | MAE<a href="#" class="close">&times;</a></div>
+            </div>
+            <div class="row">
+                <div class="small-centered small-10 columns alert-box [radius round]" data-alert>Marry | Age:23 | ECE<a href="#" class="close">&times;</a></div>
+            </row>
+        </div>
         <!--SPACER-->
         <div class="row">
             <div class="small-centered small-10 columns">
@@ -39,12 +54,15 @@
         <!--PEOPLE-->
      	<div class="person">
             <div class="row">
+                <h4 class="text-center">Requests Waiting on You</h4>
+            </div>
+            <div class="row">
                 <div class="small-centered small-8 columns">
                     <div class="small-4 columns">
-                        <h4 class="text-left">Tim Holloway</h4>
+                        <h5 class="text-left">Tim Holloway</h5>
                     </div>
                     <div class="small-4 columns">
-                        <h4 class="text-right">Age:24 CSE</h4>
+                        <h5 class="text-right">Age:24 CSE</h5>
                     </div>
                 </div>
             </div>
@@ -66,8 +84,8 @@
                             <li><a href="#" class="button expand alert">DENY</a></li>
                             <li><a href="#" class="button expand success">ACCEPT</a></li>
                         </ul> -->
-                        <a href="#" class="small round button success left" style="width:45%">Accept</a>
-                        <a href="#" class="small round button alert right" style="width:45%">Deny</a>
+                        <a href="#" class="small radius button success left" style="width:45%">Accept</a>
+                        <a href="#" class="small radius button alert right" style="width:45%">Deny</a>
 
                 </div>
             </div>
