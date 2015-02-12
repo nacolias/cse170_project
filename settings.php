@@ -33,7 +33,7 @@
     <!--Main Body-->
 
     <div class="row">
-        <center><h1>Settings</h1></center>
+        <center><h1>GeneralSettings</h1></center>
     </div>
 
  	<div class="row">
@@ -50,23 +50,19 @@
 
     <hr />
 
-    <div class="row">
-       <div class="columns small-8 small-centered person">
-             <center><h4>Connect</h4></center>
-       </div>
-    </div>
+    <center><h1>Connect</h1></center>
 
     <div class="row">
-        <div class="columns small-centered small-8">
+        <div class="columns small-centered person small-8">
             <div class="row">
-                <div class="columns left small-5 person">
+                <div class="small-6 columns left">
                     <center><i class="fa fa-facebook-square fa-3x"></i></center>
-                    <center><h5>Facebook Messenger</h5></center>
+                    <center><small><h6>Messenger</h6></small></center>
                 </div>
-
-                <div class="columns right small-5 person">
+                <vr />
+                <div class="small-6 columns right">
                     <center><i class="fa fa-google fa-3x"></i></center>
-                    <center><h5>Google Calendar</h5></center>
+                    <center><small><h6>Calendar</h6></small></center>
                 </div>
             </div>
         </div>
