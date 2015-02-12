@@ -19,7 +19,7 @@
 		    		<div class="small-centered">
 				    	<center>
 				    		<i class="fa fa-users fa-2x"></i>
-                            <i class="fa fa-search fa-2x"></i>
+                            <a href="search.html"><i class="fa fa-search fa-2x"></i></a>
                             <a href="index.php"><i class="fa fa-home fa-2x"></i></a>
                             <a href="friend_requests.php"><i class="fa fa-user-plus fa-2x"></i></a>
                             <a href="settings.php"><i class="fa fa-gear fa-2x"></i></a>
