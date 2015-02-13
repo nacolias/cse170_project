@@ -33,6 +33,29 @@ require_once("dbconn.php");
 
 
 
+    $(document).on('click', '#availability', function(evt){
+        evt.preventDefault();
+        $.post("viewcurrent.php",{
+
+
+         },
+        function(data) {
+            $("#availabilitytable").html(data);
+        });
+    });
+
+    $(document).on('click', '.group_tag', function(evt){
+        evt.preventDefault();
+        $.post("browse_group.php",{
+            gid : $(this).id,
+
+         },
+        function(data) {
+            $("#main_content").html(data);
+        });
+    });
+
+
     $(document).ready(function(){
         $.post("homepage.php",{
 
@@ -84,16 +107,7 @@ require_once("dbconn.php");
     });
 
 
-    $(document).on('click', '#availability' function(evt){
-        evt.preventDefault();
-        $.post("viewcurrent.php",{
 
-
-         },
-        function(data) {
-            $("#main_content").html(data);
-        });
-    });
 
 
     </script>
