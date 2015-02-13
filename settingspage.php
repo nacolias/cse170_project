@@ -47,7 +47,7 @@
 
     <div class="row">
       <a href="setup.php">
-       <div class="columns small-8 small-centered person">
+       <div class="columns small-10 small-centered person">
             <center><h4>Edit Profile Settings</h4></center>
        </div>
       </a>
@@ -55,7 +55,7 @@
 
     <div class="row">
       <a href="logout.php">
-       <div class="columns small-8 small-centered person">
+       <div class="columns small-10 small-centered person">
             <center><h4>Logout</h4></center>
        </div>
       </a>
