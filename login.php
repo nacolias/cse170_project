@@ -8,11 +8,11 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
   {
     $direction = "logout.php";
   }
-  header("Location:http://nacolias.ucsd.edu/time-space/$direction");
+  header("Location: http://$_SERVER[HTTP_HOST]/time-space/$direction");
   exit;
 }
 //require "/var/www/html/jump/filter_users.php";
-require "/Applications/MAMP/htdocs/time-space/dbconn.php";
+require "dbconn.php";
 ?>
 
 

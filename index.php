@@ -4,11 +4,11 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
 {
   // check their log in time
   if(time() >= $_SESSION['logout_time'])
-    header("Location:http://nacolias.ucsd.edu/time-space/logout.php");
+    header("Location:http://$_SERVER[HTTP_HOST]/time-space/logout.php");
 }
 else
 {
-  header("Location:http://nacolias.ucsd.edu/time-space/login.php");
+  header("Location:http://$_SERVER[HTTP_HOST]/time-space/login.php");
 }
 ?>
 
@@ -27,6 +27,8 @@ else
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
+
+
 
     $(document).ready(function(){
         $.post("homepage.php",{
