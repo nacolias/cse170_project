@@ -31,13 +31,18 @@ $max_file_size = 10000000; // size in bytes
 
     <!--Nav-->
     <div class="fixed sticky"> 
-            <nav class="top-bar" data-topbar role="navigation">
-                <ul class="title-area">
-                  <li class="name">
-                    <center><h1>Timespace</h1></center>
-                </ul>
-            </nav> 
-    </div>
+        <nav class="top-bar" data-topbar role="navigation">
+          <div class="row">
+            <div class="small-centered">
+              <center>
+                <i id="groups"class="fa fa-users fa-2x"></i>
+                <i id="home" class="fa fa-home fa-2x"></i>
+                <i id="settings"class="fa fa-gear fa-2x"></i>
+            </center>
+          </div>
+        </div>
+        </nav> 
+  </div>
 	<!--End Nav-->
 
   <!--Initial Set up Information Form-->
