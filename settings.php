@@ -39,8 +39,10 @@
     <div class="form">
       <div class="row">
         <div class="small-8 small-centered columns person">
-        <center><h4>Availability</h4></center>
+          <center><h4>Availability</h4></center>
           <br />
+          <br />
+
           <center>
             <input id="sunday"type="checkbox" value=""><label for="Sunday"><span>S</span></label>
             <input id="monday"type="checkbox" value=""><label for="Monday"><span>M</span></label>
@@ -52,20 +54,37 @@
           </center>
 
           <br />
+          <div class="row">
+            <div class="small-12 small-centered columns">
+             <div class="small-6 columns">
+                <input id="starttime" type="text" placeholder="Start Time" />
+              </div>
 
-          <input type="text" placeholder="small-4.columns" /> 
-
-          <div class="buttonarea">
-
+              <div class="small-6 columns">
+                <input id="endtime" type="text" placeholder="End Time" />
+              </div> 
+            </div>
           </div>
 
+          <div class="row">
+            <div class="small-centered small-10 columns buttonarea">
+                <center>
+                    <a href="#" class="small left button">View Current</a>
+                    <div id="submit" action"" class="small right button">Submit</a>
+                </center>
+            </div>
         </div>
+
+        </div>
+      </div>
     </div>
 
     <div class="row">
+      <a href="setup.php">
        <div class="columns small-8 small-centered person">
             <center><h4>Edit Profile Settings</h4></center>
        </div>
+      </a>
     </div>
 
     <script src="js/vendor/jquery.js"></script>
