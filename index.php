@@ -79,6 +79,16 @@ else
             });
         });
 
+        $("#availability").click(function(evt){
+            evt.preventDefault();
+            $.post("viewcurrent.php",{
+
+             },
+            function(data) {
+                $("#main_content").html(data);
+            });
+        });
+
     });
 
 

@@ -27,7 +27,7 @@ else
                 <div class="small-centered small-8 columns">
                     <h4 class="text-left left">
                         <small>
-                            Major:Computer Engineering, 6th Year
+                            Major:Computer Engineering
                         </small>
                     </h4>
                 </div>
