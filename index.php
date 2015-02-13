@@ -11,9 +11,7 @@ else
   header("Location:http://$_SERVER[HTTP_HOST]/time-space/login.php");
 }
 
-require("dbconn.php");
-?>
-
+require_once("dbconn.php");
 
 <!doctype html>
 <html class="no-js" lang="en">
