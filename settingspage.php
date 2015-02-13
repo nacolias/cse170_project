@@ -4,7 +4,7 @@
 
     <div class="form">
       <div class="row">
-        <div class="small-8 small-centered columns person">
+        <div class="small-10 small-centered columns person">
           <center><h4>Availability</h4></center>
           <br />
           <br />
@@ -49,6 +49,14 @@
       <a href="setup.php">
        <div class="columns small-8 small-centered person">
             <center><h4>Edit Profile Settings</h4></center>
+       </div>
+      </a>
+    </div>
+
+    <div class="row">
+      <a href="logout.php">
+       <div class="columns small-8 small-centered person">
+            <center><h4>Logout</h4></center>
        </div>
       </a>
     </div>

@@ -54,7 +54,7 @@ else
         <div class="row">
             <div class="small-centered small-8 columns buttonarea">
                 <center>
-                    <a href="sms:1-818-632-2449" class="small left button">SMS</a>
+                    <a href="sms:1-818-632-2449" class="small button">SMS</a>
                 </center>
             </div>
         </div>
