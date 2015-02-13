@@ -55,11 +55,12 @@ require "/Applications/MAMP/htdocs/time-space/dbconn.php";
             password:$("#password").val() 
           },
           function(data) {
-            // alert(data);
-            if(data == true)
+            var json_data = JSON.parse(data);
+            var auth_direction = data['direction'];
+            if(json_data['authUser'] == true)
             {
               alert("LOGGED IN");
-              window.location="<?php echo isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php'; ?>";
+              window.location=json_data['direction'];
             }
             else
             {
@@ -123,6 +124,8 @@ require "/Applications/MAMP/htdocs/time-space/dbconn.php";
           </div>
       </div>
   </form>
+  <div id="errors">
+  </div>
 </div>
 
 
