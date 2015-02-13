@@ -10,6 +10,7 @@ else
 {
   header("Location:http://$_SERVER[HTTP_HOST]/time-space/login.php");
 }
+
 require_once("dbconn.php");
 
 ?>
@@ -81,13 +82,14 @@ require_once("dbconn.php");
             });
         });
 
-        $("#availability").click(function(evt){
+        $("#availability").on("click", function(evt){
+            alert("Hiii");
             evt.preventDefault();
             $.post("viewcurrent.php",{
 
              },
             function(data) {
-                $("#main_content").html(data);
+                $("#availabilitytable").html(data);
             });
         });
 
