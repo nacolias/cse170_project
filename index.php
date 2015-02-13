@@ -1,3 +1,18 @@
+<?php
+session_start();
+if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
+{
+  // check their log in time
+  if(time() >= $_SESSION['logout_time'])
+    header("Location:http://nacolias.ucsd.edu/time-space/logout.php");
+}
+else
+{
+  header("Location:http://nacolias.ucsd.edu/time-space/login.php");
+}
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
