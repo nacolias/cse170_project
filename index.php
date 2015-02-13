@@ -54,7 +54,7 @@ require_once("dbconn.php");
         $("#groups").click(function(evt){
             evt.preventDefault();
             $.post("homepage.php",{
-
+ 
              },
             function(data) {
                 $("#main_content").html(data);
@@ -81,18 +81,18 @@ require_once("dbconn.php");
                 $("#main_content").html(data);
             });
         });
+    });
 
-        $("#availability").on("click", function(evt){
-            alert("Hiii");
-            evt.preventDefault();
-            $.post("viewcurrent.php",{
 
-             },
-            function(data) {
-                $("#availabilitytable").html(data);
-            });
+    $(document).on('click', '#availability' function(evt){
+        evt.preventDefault();
+        $.post("viewcurrent.php",{
+
+
+         },
+        function(data) {
+            $("#main_content").html(data);
         });
-
     });
 
 
