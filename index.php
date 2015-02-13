@@ -82,7 +82,8 @@ require_once("dbconn.php");
             });
         });
 
-        $("#availability").click(function(evt){
+        $("#availability").on("click", function(evt){
+            alert("Hiii");
             evt.preventDefault();
             $.post("viewcurrent.php",{
 
