@@ -10,6 +10,8 @@ else
 {
   header("Location:http://$_SERVER[HTTP_HOST]/time-space/login.php");
 }
+
+require("dbconn.php");
 ?>
 
 
@@ -85,7 +87,7 @@ else
 
              },
             function(data) {
-                $("#main_content").html(data);
+                $("#availabilitytable").html(data);
             });
         });
 
