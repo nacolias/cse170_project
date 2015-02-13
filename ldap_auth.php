@@ -9,8 +9,6 @@ $username = strtolower($_POST['username']);
 $password = $_POST['password'];
 
 
-
-
 $json_response = array();
 $current_users = array();
 $username_query_result = $dbconn->query('select username from people') or die("Error getting usernames");

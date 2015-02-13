@@ -35,7 +35,7 @@
           <div class="row">
             <div class="small-centered small-10 columns buttonarea">
                 <center>
-                    <a href="#" class="small left button">View Current</a>
+                    <a href="#" id="availability" class="small left button">View Current</a>
                     <div id="submittime" action"" class="small right button">Submit</a>
                 </center>
             </div>
@@ -47,7 +47,7 @@
 
     <div class="row">
       <a href="setup.php">
-       <div class="columns small-8 small-centered person">
+       <div class="columns small-10 small-centered person">
             <center><h4>Edit Profile Settings</h4></center>
        </div>
       </a>
@@ -55,7 +55,7 @@
 
     <div class="row">
       <a href="logout.php">
-       <div class="columns small-8 small-centered person">
+       <div class="columns small-10 small-centered person">
             <center><h4>Logout</h4></center>
        </div>
       </a>

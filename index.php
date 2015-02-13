@@ -69,6 +69,28 @@ require_once("dbconn.php");
                 $("#main_content").html(data);
             });
         });
+
+
+        $("#groups").click(function(evt){
+            evt.preventDefault();
+            $.post("groups.php",{
+
+             },
+            function(data) {
+                $("#main_content").html(data);
+            });
+        });
+
+        $("#availability").click(function(evt){
+            evt.preventDefault();
+            $.post("viewcurrent.php",{
+
+             },
+            function(data) {
+                $("#main_content").html(data);
+            });
+        });
+
     });
 
 
