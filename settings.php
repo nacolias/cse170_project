@@ -19,10 +19,10 @@
 		    		<div class="small-centered">
 				    	<center>
 				    		<i class="fa fa-users fa-2x"></i>
-							<i class="fa fa-search fa-2x"></i>
-							<a href="index.php"><i class="fa fa-home fa-2x"></i></a>
-							<a href="friend_requests.php"><i class="fa fa-user-plus fa-2x"></i></a>
-                            <a href="settings.html"><i class="fa fa-gear fa-2x"></i></a>
+  							<i class="fa fa-search fa-2x"></i>
+  							<a href="index.php"><i class="fa fa-home fa-2x"></i></a>
+  							<a href="friend_requests.php"><i class="fa fa-user-plus fa-2x"></i></a>
+                <a href="settings.html"><i class="fa fa-gear fa-2x"></i></a>
 						</center>
 					</div>
 				</div>
@@ -59,7 +59,6 @@
                     <center><i class="fa fa-facebook-square fa-3x"></i></center>
                     <center><small><h6>Messenger</h6></small></center>
                 </div>
-                <vr />
                 <div class="small-6 columns right">
                     <center><i class="fa fa-google fa-3x"></i></center>
                     <center><small><h6>Calendar</h6></small></center>

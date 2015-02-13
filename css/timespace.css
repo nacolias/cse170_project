@@ -47,8 +47,36 @@
     border-radius: .5em;
 }
 
+.top-bar{
+    padding-right:2%;
+}
+
 .top-bar .fa{
     color:white;
     padding:.2em 5% 0 5%;
 }
 
+.name center h1{
+    color:white;
+    /*
+    padding-left: 10%
+    There are some issues when we expand this to go to a normal sized screen.
+    Will look into it later.
+    */
+}
+
+.searchbar div{
+    padding:0;
+}
+
+.searchbar .fa-search{
+    text-align: center;
+    vertical-align:text-bottom;
+    height:100%;
+    background-color: gray;
+    padding:.75em;
+    margin-left: 0;
+    border-radius: .5em;
+    margin-left: 1em;
+    color:white;
+}
