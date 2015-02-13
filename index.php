@@ -81,16 +81,16 @@ require_once("dbconn.php");
             });
         });
 
-        $("#availability").click(function(evt){
-            evt.preventDefault();
-            $.post("viewcurrent.php",{
+    });
 
-             },
-            function(data) {
-                $("#main_content").html(data);
-            });
+    $(document).on('click', '#availability' function(evt){
+        evt.preventDefault();
+        $.post("viewcurrent.php",{
+
+         },
+        function(data) {
+            $("#main_content").html(data);
         });
-
     });
 
 
