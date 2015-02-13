@@ -55,7 +55,7 @@ else
              },
             function(data) {
                 $("#main_content").html(data);
-            })
+            });
         });
 
         $("#settings").click(function(evt){
@@ -65,8 +65,9 @@ else
              },
             function(data) {
                 $("#main_content").html(data);
-            })
+            });
         });
+    });
 
 
     </script>

@@ -18,7 +18,7 @@ while($row = $username_query_result->fetch_assoc())
 {
 	array_push($current_users, $row['username']);
 }
-$direction = 'index.html';
+$direction = 'index.php';
 
 
 
