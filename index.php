@@ -10,6 +10,8 @@ else
 {
   header("Location:http://$_SERVER[HTTP_HOST]/time-space/login.php");
 }
+require_once("dbconn.php");
+
 ?>
 
 

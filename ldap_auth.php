@@ -2,7 +2,7 @@
 session_start();
 date_default_timezone_set('America/Los_Angeles');
 require_once('adLDAP.php');
-require_once("/Applications/MAMP/htdocs/time-space/dbconn.php");
+require_once("dbconn.php");
 //require_once("/var/www/html/jump/filter_users.php");
 
 $username = strtolower($_POST['username']);

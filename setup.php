@@ -1,4 +1,17 @@
 <?php 
+session_start();
+if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
+{
+  // check their log in time
+  if(time() >= $_SESSION['logout_time'])
+    header("Location:http://$_SERVER[HTTP_HOST]/time-space/logout.php");
+}
+else
+{
+  header("Location:http://$_SERVER[HTTP_HOST]/time-space/login.php");
+}
+
+require_once("dbconn.php");
 
 $directory_self = str_replace(basename($_SERVER['PHP_SELF']), '', $_SERVER['PHP_SELF']); 
 
@@ -9,6 +22,24 @@ $uploadHandler = 'http://' . $_SERVER['HTTP_HOST'] . $directory_self . 'upload.p
 $max_file_size = 10000000; // size in bytes 
 
 // now echo the html page 
+$fname = '';
+$lname = '';
+$major = '';
+$phone_number = '';
+$img_directory = '';
+
+$userinfo_query_result = $dbconn->query('select * from people where username="' . $_SESSION['username'] . '"') or die("Error getting user info");
+while($row = $userinfo_query_result->fetch_assoc())
+{
+    $fname = $row['fname'];
+    $lname = $row['lname'];
+    $major = $row['major'];
+    $phone_number = $row['phone_number'];
+    $img_directory = $row['img_directory'];
+}
+
+
+
 ?>
 
 <!doctype html>
@@ -21,10 +52,27 @@ $max_file_size = 10000000; // size in bytes
     <script src="js/vendor/modernizr.js"></script>
     <link rel="stylesheet" href="img/font-awesome-4.3.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/timespace.css">
+    <script src="js/jquery-2.1.3.min.js"></script>
 
+  <script>
+  $(document).ready(function(){
 
-
-    
+    $("#submitinfo").click(function(evt){
+      evt.preventDefault();
+      $.post("functions.php",{
+        action : 'update_info',
+        fname : $("#fname").val(),
+        lname : $("#lname").val(),
+        major : $("#major option:selected").text(),
+        phone_number : $("#phone").val(),
+        img_directory : $("#file").val(),
+       },
+      function(data) {
+          alert(data);
+      });
+    });
+  });
+  </script>
 
 </head>
   <body>
@@ -54,16 +102,16 @@ $max_file_size = 10000000; // size in bytes
     <form id="Upload" action="<?php echo $uploadHandler ?>" enctype="multipart/form-data" method="post">
       <div class="row">
         <div class="small-6 columns left">
-          <input type="text" name="firstName" placeholder="First name"/>
+          <input type="text" name="firstName" id="fname" <?php if($fname != '') echo "value='$fname'"; ?> placeholder="First name"/>
         </div>
         <div class="small-6 columns right">
-          <input type="text" name="lastName" placeholder="Last name"/>
+          <input type="text" name="lastName" <?php if($lname != '') echo "value='$lname'"; ?> id="lname" placeholder="Last name"/>
         </div>
       </div>
 
       <div class="row">
         <div class="small-6 columns left">
-          <select>
+          <select id="school_year">
             <option value="blankYear">Select Year</option>
             <option value="first">1st</option>
             <option value="second">2nd</option>
@@ -75,44 +123,29 @@ $max_file_size = 10000000; // size in bytes
         </div>
 
         <div class="small-6 columns right">
-          <select>
+          <select id='major'>
             <option value="blankYear">Select Major</option>
-            <option value="anthropology">ANTH</option>
-            <option value="bioengineering">BENG</option>
-            <option value="biology">BIO</option>
-            <option value="chemistry">CHEM</option>
-            <option value="cognitive">COGS</option>
-            <option value="communication">COMM</option>
-            <option value="computerscience">CSE</option>
-            <option value="economics">ECON</option>
-            <option value="education">EDS</option>
-            <option value="electrical">ECE</option>
-            <option value="ethnic">ETHN</option>
-            <option value="familymed">FPM</option>
-            <option value="globalhealth">GLBH</option>
-            <option value="history">HIST</option>
-            <option value="language">LANG</option>
-            <option value="linguistics">LING</option>
-            <option value="literature">LIT</option>
-            <option value="math">MATH</option>
-            <option value="mae">MAE</option>
-            <option value="music">MUS</option>
-            <option value="nano">NANO</option>
-            <option value="philosophy">PHIL</option>
-            <option value="physics">PHYS</option>
-            <option value="poli">POLI</option>
-            <option value="pysch">PSYC</option>
-            <option value="sio">SIO</option>
-            <option value="sociology">SOCI</option>
-            <option value="structural">SE</option>
-            <option value="vis">VIS</option>
+            <?php
+              $major_array = array('ANTH','BENG','BIO','CHEM','COGS','COMM','CSE','ECON','EDS','ECE','ETHN','FPM','GLBH','HIST','LANG','LING','LIT','MATH','MAE','MUS','NANO','PHIL','PHYS','POLI','PSYC','SIO','SOCI','SE','VIS');
+              foreach($major_array as $tmp_major)
+              {
+                if($major==$tmp_major)
+                {
+                  echo "<option selected value='$tmp_major'>$tmp_major</option>";
+                }
+                else
+                {
+                  echo "<option value='$tmp_major'>$tmp_major</option>";
+                }
+              } 
+            ?>
           </select>
         </div>
       </div>
 
       <div class="row">
         <div class="small-6 columns left">
-          <input type="text" name="phoneNumber" placeholder="Phone number(for SMS)"/>
+          <input id='phone' <?php if($phone_number != '') echo "value='$phone_number'"; ?> type="text" name="phoneNumber" placeholder="Phone number(for SMS)"/>
         </div>
 
         <div class="small-6 columns left">
