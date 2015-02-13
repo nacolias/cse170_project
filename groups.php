@@ -1,7 +1,7 @@
 <?php
     $index = 1;
     
-    while($index <= 8){}
+    while($index <= 8){
 ?>
 <div class="row">
    <div class="columns small-8 small-centered person">
@@ -10,6 +10,6 @@
 </div>
 
 <?php
-        $i++;
+        $index++;
     }
 ?>
