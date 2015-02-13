@@ -33,38 +33,39 @@
     <!--Main Body-->
 
     <div class="row">
-        <center><h1>GeneralSettings</h1></center>
+        <center><h1>General Settings</h1></center>
     </div>
 
- 	<div class="row">
-       <div class="columns small-8 small-centered person">
-            <center><h4>Netowork Options</h4></center>
-       </div>
-    </div>
+    <div class="form">
+      <div class="row">
+        <div class="small-8 small-centered columns person">
+        <center><h4>Availability</h4></center>
+          <br />
+          <center>
+            <input id="sunday"type="checkbox" value=""><label for="Sunday"><span>S</span></label>
+            <input id="monday"type="checkbox" value=""><label for="Monday"><span>M</span></label>
+            <input id="tuesday"type="checkbox" value=""><label for="Tuesday">T</label>
+            <input id="wednesday"type="checkbox" value=""><label for="Wednesday">W</label>
+            <input id="thursday" type="checkbox" value=""><label for="Thursday">T</label>
+            <input id="friday"type="checkbox" value=""><label for="Friday">F</label>
+            <input id="saturday" type="checkbox" value=""><label for="Saturday">S</label>
+          </center>
 
-    <div class="row">
-       <div class="columns small-8 small-centered person">
-            <center><h4>Profile Picture</h4></center>
-       </div>
-    </div>
+          <br />
 
-    <hr />
+          <input type="text" placeholder="small-4.columns" /> 
 
-    <center><h1>Connect</h1></center>
+          <div class="buttonarea">
 
-    <div class="row">
-        <div class="columns small-centered person small-8">
-            <div class="row">
-                <div class="small-6 columns left">
-                    <center><i class="fa fa-facebook-square fa-3x"></i></center>
-                    <center><small><h6>Messenger</h6></small></center>
-                </div>
-                <div class="small-6 columns right">
-                    <center><i class="fa fa-google fa-3x"></i></center>
-                    <center><small><h6>Calendar</h6></small></center>
-                </div>
-            </div>
+          </div>
+
         </div>
+    </div>
+
+    <div class="row">
+       <div class="columns small-8 small-centered person">
+            <center><h4>Edit Profile Settings</h4></center>
+       </div>
     </div>
 
     <script src="js/vendor/jquery.js"></script>
