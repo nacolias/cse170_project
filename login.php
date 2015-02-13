@@ -98,31 +98,31 @@ require "/Applications/MAMP/htdocs/time-space/dbconn.php";
 
 <!-- Form Boxes -->
 <div class="person">
-	<div class="row">
-		<center><h1>Login</h4></center>
-	</div>
-
-	<form id='login_form'>
-		<div class="row">
-       		<div class="columns small-6 small-centered person">
-            	<input type="text" id="username" name="username" placeholder="Username"/>
-       		</div>
-    	</div>
-
-    	<div class="row">
-       		<div class="columns small-6 small-centered person">
-            	<input type="password" id="password" name="password" placeholder="Password" />
-       		</div>
-    	</div>
-
-    	<div class="row">
-       		<div class="columns small-6 small-centered person">
-            	<input type="submit" class="button expand" value="Log In" id='login'/>
-       		</div>
-    	</div>
-	</form>
-  <div id="errors">
+  <div class="row">
+    <center><h1>Login</h4></center>
   </div>
+
+  <form id='login_form'>
+    <div class="row">
+          <div class="columns small-10 small-centered ">
+              <input type="text" name="username" id='username' placeholder="Username"/>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="columns small-10 small-centered ">
+              <input type="password" name="password" id='password' placeholder="Password" />
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="columns small-8 small-centered">
+              <input type="submit" class="button expand" id='login' value="Log In"/>
+              <br />
+              <center><a href="#"><p>Forgot Password?</p></a></center>
+          </div>
+      </div>
+  </form>
 </div>
 
 
