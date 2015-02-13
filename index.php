@@ -45,7 +45,26 @@ else
                 $("#main_content").html(data);
             });
         });
-    });
+
+        $("#groups").click(function(evt){
+            evt.preventDefault();
+            $.post("homepage.php",{
+
+             },
+            function(data) {
+                $("#main_content").html(data);
+            })
+        });
+
+        $("#settings").click(function(evt){
+            evt.preventDefault();
+            $.post("settingspage.php",{
+
+             },
+            function(data) {
+                $("#main_content").html(data);
+            })
+        });
 
 
     </script>
@@ -59,11 +78,9 @@ else
 		    	<div class="row">
 		    		<div class="small-centered">
 				    	<center>
-				    		<i class="fa fa-users fa-2x"></i>
-                            <a href="search.html"><i class="fa fa-search fa-2x"></i></a>
-                            <a href="index.php"><i id="home" class="fa fa-home fa-2x"></i></a>
-                            <a href="friend_requests.php"><i class="fa fa-user-plus fa-2x"></i></a>
-                            <a href="settings.php"><i class="fa fa-gear fa-2x"></i></a>
+				    		<i id="groups"class="fa fa-users fa-2x"></i>
+                            <i id="home" class="fa fa-home fa-2x"></i>
+                            <i id="settings"class="fa fa-gear fa-2x"></i>
 						</center>
 					</div>
 				</div>

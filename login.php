@@ -1,4 +1,4 @@
-<?php
+<?php/*
 session_start();
 if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
 {
@@ -13,7 +13,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
 }
 //require "/var/www/html/jump/filter_users.php";
 require "/Applications/MAMP/htdocs/time-space/dbconn.php";
-?>
+*/?>
 
 
 <!doctype html>

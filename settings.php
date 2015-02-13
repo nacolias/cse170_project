@@ -57,11 +57,11 @@
           <div class="row">
             <div class="small-12 small-centered columns">
              <div class="small-6 columns">
-                <input id="starttime" type="text" placeholder="Start Time" />
+                <input id="starttime" type="time" placeholder="Start Time" />
               </div>
 
               <div class="small-6 columns">
-                <input id="endtime" type="text" placeholder="End Time" />
+                <input id="endtime" type="time" placeholder="End Time" />
               </div> 
             </div>
           </div>
@@ -70,7 +70,7 @@
             <div class="small-centered small-10 columns buttonarea">
                 <center>
                     <a href="#" class="small left button">View Current</a>
-                    <div id="submit" action"" class="small right button">Submit</a>
+                    <div id="submittime" action"" class="small right button">Submit</a>
                 </center>
             </div>
         </div>

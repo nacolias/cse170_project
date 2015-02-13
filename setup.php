@@ -112,7 +112,7 @@ $max_file_size = 10000000; // size in bytes
         </div>
 
         <div class="small-6 small-centered columns">
-          <input class="button" id="submit" type="submit" name="submit" value="Submit">
+          <input class="button" id="submitinfo" type="submit" name="submit" value="Submit">
         </div>
 
       </div>
