@@ -73,7 +73,7 @@ else
 
     <!--Main Body-->
     <div id="main_content">
-    
+
     </div>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>

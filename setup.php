@@ -109,7 +109,10 @@ $max_file_size = 10000000; // size in bytes
         <div class="small-6 columns left">
           <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size ?>">
           <input id="file" type="file" name="file">
-          <input id="submit" type="submit" name="submit" value="Upload me!">
+        </div>
+
+        <div class="small-6 small-centered columns">
+          <input class="button" id="submit" type="submit" name="submit" value="Submit">
         </div>
 
       </div>

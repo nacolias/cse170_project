@@ -87,3 +87,12 @@
     vertical-align:middle;
     margin:-2.5em 2em 2em -1.7em;
 }
+
+#submit{
+    width:100%;
+    background-color:gray;
+}
+
+input[type="file"]{
+    width:150%;
+}
