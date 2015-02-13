@@ -67,6 +67,18 @@ else
                 $("#main_content").html(data);
             });
         });
+
+
+        $("#groups").click(function(evt){
+            evt.preventDefault();
+            $.post("groups.php",{
+
+             },
+            function(data) {
+                $("#main_content").html(data);
+            });
+        });
+
     });
 
 
