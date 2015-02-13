@@ -44,15 +44,7 @@ else
                 <center><h4>Free Until: 6:00 PM</h4></center>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="small-centered small-8 columns buttonarea">
-                <center>
-                    <a href="sms:1-818-632-2449" class="small button">SMS</a>
-                </center>
-            </div>
-        </div>
-
+    
         <div class="row">
             <div class="small-centered small-8 columns buttonarea">
                 <center>
