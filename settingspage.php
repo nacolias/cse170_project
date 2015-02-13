@@ -35,10 +35,14 @@
           <div class="row">
             <div class="small-centered small-10 columns buttonarea">
                 <center>
-                    <a href="#" id="availability" class="small left button">View Current</a>
-                    <div id="submittime" action"" class="small right button">Submit</a>
+                    <a id="availability" class="small left button">View Current</a>
+                    <a id="submittime" class="small right button">Submit</a>
                 </center>
             </div>
+
+          <div id="availabilitytable" class="row">
+
+          </div>
         </div>
 
         </div>
