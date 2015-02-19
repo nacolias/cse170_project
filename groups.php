@@ -25,10 +25,22 @@ foreach($user_groups as $id=>$group)
 ?>
 	<div class="row">
 	   <div class="columns small-8 small-centered person">
-	        <center><h4 class="group_tag" id="<?php echo $id ?>"><?php echo $group ?></h4></center>
+	        <div class="columns small-9 left group_tag">
+                <h4  data-group_id="<?php echo $id ?>"><?php echo $group ?></h4>
+            </div>
+            <div class="columns small-3 right">
+                <i class="fa fa-minus"></i>
+            </div>
+            <br />
 	   </div>
 	</div>
 
 <?php
 }
 ?>
+
+<div class="row">
+    <div class="columns small-8 small-centered addGroup">
+        <center><h5 class="subheader">Add More Groups</h5></center>
+    </div>
+</div>

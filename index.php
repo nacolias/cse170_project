@@ -75,10 +75,11 @@ require_once("dbconn.php");
         }
     });
 
-    $(document).on('click', '.group_tag', function(evt){
+    $(document).on('click', '.group_tag h4', function(evt){
         evt.preventDefault();
-        $.post("browse_group.php",{
-            gid : $(this).id,
+        $.post("functions.php",{
+            action : 'get_all_group',
+            gid : $(this).data('group_id'),
 
          },
         function(data) {
@@ -88,8 +89,8 @@ require_once("dbconn.php");
 
 
     $(document).ready(function(){
-        $.post("homepage.php",{
-
+        $.post("functions.php",{
+            action: 'get_all_current_available',
          },
         function(data) {
             $("#main_content").html(data);
@@ -97,8 +98,8 @@ require_once("dbconn.php");
 
         $("#home").click(function(evt){
             evt.preventDefault();
-            $.post("homepage.php",{
-
+            $.post("functions.php",{
+                action: 'get_all_current_available',
              },
             function(data) {
                 $("#main_content").html(data);
