@@ -44,6 +44,25 @@ require_once("dbconn.php");
         });
     });
 
+    $(document).on('click', '#submittime', function(evt){
+        evt.preventDefault();
+        $.post("functions.php",{
+            action: 'add_availability',
+            sunday: $("#sunday").is(':checked'),
+            monday: $("#monday").is(':checked'),
+            tuesday: $("#tuesday").is(':checked'),
+            wednesday: $("#wednesday").is(':checked'),
+            thursday: $("#thursday").is(':checked'),
+            friday: $("#friday").is(':checked'),
+            saturday: $("#saturday").is(':checked'),
+            start_time: $("#starttime").val(),
+            end_time: $("#endtime").val(),
+         },
+        function(data) {
+            $("#availabilitytable").html(data);
+        });
+    });
+
     $(document).on('click', '.group_tag', function(evt){
         evt.preventDefault();
         $.post("browse_group.php",{
