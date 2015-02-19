@@ -105,9 +105,9 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
     $return_json_array = array();
 
     $username = '';
-    if(isset($_POST['username']))
+    if(isset($_SESSION['username']))
     {
-        $username = $_POST['username'];
+        $username = $_SESSION['username'];
     }
     else
     {
@@ -123,7 +123,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
         $people_html .= 
         "<div class='person'>
             <div class='row'>
-                <div class='small-centered small-8 columns'>;
+                <div class='small-centered small-8 columns'>
                     <h4>" . $row['fname'] . " " . $row['lname'] . "</h4>
                 </div>
             </div>
@@ -162,8 +162,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
 
     }
 
-
-
+    echo $people_html;
 
 
 
