@@ -8,6 +8,7 @@
     <script src="js/vendor/modernizr.js"></script>
     <link rel="stylesheet" href="img/font-awesome-4.3.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/timespace.css">
+    <script src="validate.js"></script>
 
   </head>
   <body>
@@ -36,7 +37,7 @@
         <center><h1>General Settings</h1></center>
     </div>
 
-    <div class="form">
+    <form name="availability_form" onsubmit="return validateForm()" method="post">
       <div class="row">
         <div class="small-8 small-centered columns person">
           <center><h4>Availability</h4></center>
@@ -44,24 +45,24 @@
           <br />
 
           <center>
-            <input id="sunday"type="checkbox" value=""><label for="Sunday"><span>S</span></label>
-            <input id="monday"type="checkbox" value=""><label for="Monday"><span>M</span></label>
-            <input id="tuesday"type="checkbox" value=""><label for="Tuesday">T</label>
-            <input id="wednesday"type="checkbox" value=""><label for="Wednesday">W</label>
-            <input id="thursday" type="checkbox" value=""><label for="Thursday">T</label>
-            <input id="friday"type="checkbox" value=""><label for="Friday">F</label>
-            <input id="saturday" type="checkbox" value=""><label for="Saturday">S</label>
+            <input id="sunday"type="checkbox" name="sunday" value=""><label for="Sunday"><span>S</span></label>
+            <input id="monday"type="checkbox" name="monday" value=""><label for="Monday"><span>M</span></label>
+            <input id="tuesday"type="checkbox" name="tuesday" value=""><label for="Tuesday">T</label>
+            <input id="wednesday"type="checkbox" name="wednesday" value=""><label for="Wednesday">W</label>
+            <input id="thursday" type="checkbox" name="thursday" value=""><label for="Thursday">T</label>
+            <input id="friday"type="checkbox" name="friday" value=""><label for="Friday">F</label>
+            <input id="saturday" type="checkbox" name="saturday" value=""><label for="Saturday">S</label>
           </center>
 
           <br />
           <div class="row">
             <div class="small-12 small-centered columns">
              <div class="small-6 columns">
-                <input id="starttime" type="time" placeholder="Start Time" />
+                <input id="starttime" name="starttime" type="time" placeholder="Start Time" />
               </div>
 
               <div class="small-6 columns">
-                <input id="endtime" type="time" placeholder="End Time" />
+                <input id="endtime" name="endtime" type="time" placeholder="End Time" />
               </div> 
             </div>
           </div>
@@ -77,7 +78,7 @@
 
         </div>
       </div>
-    </div>
+    </form>
 
     <div class="row">
       <a href="setup.php">

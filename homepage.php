@@ -10,6 +10,25 @@ else
 {
   header("Location:http://nacolias.ucsd.edu/time-space/login.php");
 }
+
+require_once("dbconn.php");
+
+$fname = '';
+$lname = '';
+$major = '';
+$phone_number = '';
+$img_directory = '';
+
+$userinfo_query_result = $dbconn->query('select * from people where username="' . $_SESSION['username'] . '"') or die("Error getting user info");
+while($row = $userinfo_query_result->fetch_assoc())
+{
+    $fname = $row['fname'];
+    $lname = $row['lname'];
+    $major = $row['major'];
+    $phone_number = $row['phone_number'];
+    $img_directory = $row['img_directory'];
+}
+
 ?>
     <?php
 
