@@ -101,15 +101,20 @@ while($row = $userinfo_query_result->fetch_assoc())
 
     <form id="Upload" action="<?php echo $uploadHandler ?>" enctype="multipart/form-data" method="post">
       <div class="row">
-        <div class="small-6 columns left">
+        <div class="small-centered columns">
           <input type="text" name="firstName" id="fname" <?php if($fname != '') echo "value='$fname'"; ?> placeholder="First name"/>
         </div>
-        <div class="small-6 columns right">
+        
+      </div>
+     
+      <div class="row">
+        <div class="small-centered columns">
           <input type="text" name="lastName" <?php if($lname != '') echo "value='$lname'"; ?> id="lname" placeholder="Last name"/>
         </div>
       </div>
 
       <div class="row">
+        <!--
         <div class="small-6 columns left">
           <select id="school_year">
             <option value="blankYear">Select Year</option>
@@ -121,8 +126,8 @@ while($row = $userinfo_query_result->fetch_assoc())
             <option value="sixth">6th</option>
           </select>
         </div>
-
-        <div class="small-6 columns right">
+        -->
+        <div class="small-centered columns">
           <select id='major'>
             <option value="blankYear">Select Major</option>
             <?php
@@ -152,11 +157,14 @@ while($row = $userinfo_query_result->fetch_assoc())
           <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size ?>">
           <input id="file" type="file" name="file">
         </div>
+      </div>
 
+      <div class="row">
         <div class="small-6 small-centered columns">
-          <input class="button" id="submitinfo" type="submit" name="submit" value="Submit">
+          <center>
+            <input class="button" id="submitinfo" type="submit" name="submit" value="Submit">
+          </center>
         </div>
-
       </div>
 
     </form>
