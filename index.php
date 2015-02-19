@@ -76,8 +76,8 @@ require_once("dbconn.php");
 
 
     $(document).ready(function(){
-        $.post("homepage.php",{
-
+        $.post("functions.php",{
+            action: 'get_all_current_available',
          },
         function(data) {
             $("#main_content").html(data);
