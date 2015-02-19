@@ -29,6 +29,8 @@ require_once("dbconn.php");
     
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/foundation.min.js"></script>
+    <script src='validate.js'></script>
+
     <script>
 
 
@@ -46,21 +48,31 @@ require_once("dbconn.php");
 
     $(document).on('click', '#submittime', function(evt){
         evt.preventDefault();
-        $.post("functions.php",{
-            action: 'add_availability',
-            sunday: $("#sunday").is(':checked'),
-            monday: $("#monday").is(':checked'),
-            tuesday: $("#tuesday").is(':checked'),
-            wednesday: $("#wednesday").is(':checked'),
-            thursday: $("#thursday").is(':checked'),
-            friday: $("#friday").is(':checked'),
-            saturday: $("#saturday").is(':checked'),
-            start_time: $("#starttime").val(),
-            end_time: $("#endtime").val(),
-         },
-        function(data) {
-            $("#availabilitytable").html(data);
-        });
+        if(validateForm())
+        {
+            $.post("functions.php",{
+                action: 'add_availability',
+                sunday: $("#sunday").is(':checked'),
+                monday: $("#monday").is(':checked'),
+                tuesday: $("#tuesday").is(':checked'),
+                wednesday: $("#wednesday").is(':checked'),
+                thursday: $("#thursday").is(':checked'),
+                friday: $("#friday").is(':checked'),
+                saturday: $("#saturday").is(':checked'),
+                start_time: $("#starttime").val(),
+                end_time: $("#endtime").val(),
+             },
+            function(data) {
+                $("#availabilitytable").html(data);
+            });
+
+            $.post("settingspage.php",{
+
+             },
+            function(data) {
+                $("#main_content").html(data);
+            });
+        }
     });
 
     $(document).on('click', '.group_tag', function(evt){

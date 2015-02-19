@@ -1,8 +1,10 @@
+    <script src="validate.js"></script>
+
     <div class="row">
         <center><h1>General Settings</h1></center>
     </div>
 
-    <div class="form">
+    <form name="availability_form" id="availability_form" action="validate.js" onsubmit="return validateForm()" method="post">
       <div class="row">
         <div class="small-10 small-centered columns person">
           <center><h4>Availability</h4></center>
@@ -47,7 +49,7 @@
 
         </div>
       </div>
-    </div>
+    </form>
 
     <div class="row">
       <a href="setup.php">
