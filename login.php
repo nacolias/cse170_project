@@ -65,7 +65,7 @@ require "dbconn.php";
             }
             else
             {
-              $("#errors").html("<div class='msg error'><h4>Error!</h4>You failed to authenticate! Please check your username and password!</div>");
+              $("#errors").html("<h4>Error!</h4>You failed to authenticate! Please check your username and password!");
             }
           });
         }

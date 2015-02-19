@@ -52,6 +52,7 @@ while($row = $userinfo_query_result->fetch_assoc())
     <script src="js/vendor/modernizr.js"></script>
     <link rel="stylesheet" href="img/font-awesome-4.3.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/timespace.css">
+    
     <script src="js/jquery-2.1.3.min.js"></script>
 
   <script>
@@ -83,6 +84,7 @@ while($row = $userinfo_query_result->fetch_assoc())
           <div class="row">
             <div class="small-centered">
               <center>
+                <a href="nacolias.ucsd.edu/time-space"></a>
                 <i id="groups"class="fa fa-users fa-2x"></i>
                 <i id="home" class="fa fa-home fa-2x"></i>
                 <i id="settings"class="fa fa-gear fa-2x"></i>
@@ -154,7 +156,6 @@ while($row = $userinfo_query_result->fetch_assoc())
         </div>
 
         <div class="small-6 columns left">
-          <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size ?>">
           <input id="file" type="file" name="file">
         </div>
       </div>

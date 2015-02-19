@@ -16,7 +16,7 @@ while($row = $username_query_result->fetch_assoc())
 {
 	array_push($current_users, $row['username']);
 }
-$direction = 'index.php';
+$direction = 'login.php';
 
 
 
@@ -35,10 +35,14 @@ try
 			$direction = 'setup.php';
 			$dbconn->query("insert into people (username) values ('$username')");
 		}
+		else
+		{
+			$direction = 'index.php';
+		}
 	}
 	else
 	{
-		echo $adldap->getLastError() . "\n";
+		//echo $adldap->getLastError() . "\n";
 	}
 	echo json_encode(array('authUser'=>$authUser,'direction'=>$direction));
 
