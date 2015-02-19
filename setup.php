@@ -69,8 +69,10 @@ while($row = $userinfo_query_result->fetch_assoc())
         img_directory : $("#file").val(),
        },
       function(data) {
-          alert(data);
+          alert("Success!");
+          window.location.replace("index.php");
       });
+      
     });
   });
   </script>
@@ -84,10 +86,9 @@ while($row = $userinfo_query_result->fetch_assoc())
           <div class="row">
             <div class="small-centered">
               <center>
-                <a href="nacolias.ucsd.edu/time-space"></a>
-                <i id="groups"class="fa fa-users fa-2x"></i>
-                <i id="home" class="fa fa-home fa-2x"></i>
-                <i id="settings"class="fa fa-gear fa-2x"></i>
+                <a href="index.php">
+                  <i id="home" class="fa fa-home fa-2x"></i>
+                </a>
             </center>
           </div>
         </div>
@@ -101,7 +102,7 @@ while($row = $userinfo_query_result->fetch_assoc())
       <center><h1>Profile Settings</h1></center>
     </div>
 
-    <form id="Upload" action="<?php echo $uploadHandler ?>" enctype="multipart/form-data" method="post">
+    <div>
       <div class="row">
         <div class="small-centered columns">
           <input type="text" name="firstName" id="fname" <?php if($fname != '') echo "value='$fname'"; ?> placeholder="First name"/>
@@ -168,7 +169,7 @@ while($row = $userinfo_query_result->fetch_assoc())
         </div>
       </div>
 
-    </form>
+    </div>
 
   </div>
 
