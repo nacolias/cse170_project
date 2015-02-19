@@ -1,4 +1,4 @@
-    <script src="validate.js"></script>
+    
 
     <div class="row">
         <center><h1>General Settings</h1></center>
