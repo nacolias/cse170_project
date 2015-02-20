@@ -42,6 +42,9 @@
                 </center>
             </div>
 
+          <br />
+          <br />
+          <br />
           <div id="availabilitytable" class="row">
 
           </div>

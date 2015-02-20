@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="css/timespace.css">
     <script src="validate.js"></script>
 
+<!--    <script>
+
+      $(document).ready(function(){
+        $("#submittime").click(function(evt){
+          evt.preventDefault();
+          validateForm();
+        });
+        $("#availability_form").submit(function(evt){
+          evt.preventDefault();
+          validateForm();
+        });
+      });
+
+    </script>
+ -->
   </head>
   <body>
     
@@ -37,7 +52,7 @@
         <center><h1>General Settings</h1></center>
     </div>
 
-    <form name="availability_form" onsubmit="return validateForm()" method="post">
+    <form name="availability_form" id="availability_form" onsubmit="return validateForm()" method="post">
       <div class="row">
         <div class="small-8 small-centered columns person">
           <center><h4>Availability</h4></center>
@@ -58,11 +73,11 @@
           <div class="row">
             <div class="small-12 small-centered columns">
              <div class="small-6 columns">
-                <input id="starttime" name="starttime" type="time" placeholder="Start Time" />
+                <input id="starttime" name="starttime" type="time" placeholder="Start Time"/>
               </div>
 
               <div class="small-6 columns">
-                <input id="endtime" name="endtime" type="time" placeholder="End Time" />
+                <input id="endtime" name="endtime" type="time" placeholder="End Time"/>
               </div> 
             </div>
           </div>

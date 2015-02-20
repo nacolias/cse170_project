@@ -46,6 +46,11 @@ require_once("dbconn.php");
         });
     });
 
+    $(document).on('click', '.dayOfWeek', function(evt){
+        evt.preventDefault();
+        $(".availabilityTimes").slideToggle("fast");
+    });
+
     $(document).on('click', '#submittime', function(evt){
         evt.preventDefault();
         if(validateForm())

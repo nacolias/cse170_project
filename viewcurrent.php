@@ -1,44 +1,70 @@
+<div class="columns small-12">
+	<ul class="pricing-table">
+		<li class="title dayOfWeek">Sunday <i class="fa fa-long-arrow-down"></i></li>
+		<div class="availabilityTimes">
+			<li class="bullet-item">
 
-<div class="small-centered small-12 columns">
-	<table>
-		<thead>
-			<tr>
-				<th>Sunday</th>
-				<th>Monday</th>
-				<th>Tuesday</th>
-				<th>Wednesday</th>
-				<th>Thursday</th>
-				<th>Friday</th>
-				<th>Saturday</th>
-			</tr>
-		</thead>
+				<div data-alert="" class="alert-box radius">
+				  	4:00am - 5:30am <a href="" class="close">×</a>
+				</div>
+			</li>
+		</div>
 
-		<tbody>
-			<tr>
-				<td>8:00am - 9:00am</td>
-				<td>12:00pm - 4:30pm</td>
-				<td>7:00pm - 9:00pm</td>
-			</tr>
-			<tr>
-				<td>8:00am - 9:00am</td>
-				<td>12:00pm - 4:30pm</td>
-				<td>7:00pm - 9:00pm</td>
-			</tr>
-			<tr>
-				<td>8:00am - 9:00am</td>
-				<td>12:00pm - 4:30pm</td>
-				<td>7:00pm - 9:00pm</td>
-			</tr>
-			<tr>
-				<td>8:00am - 9:00am</td>
-				<td>12:00pm - 4:30pm</td>
-				<td>7:00pm - 9:00pm</td>
-			</tr>
-			<tr>
-				<td>8:00am - 9:00am</td>
-				<td>12:00pm - 4:30pm</td>
-				<td>7:00pm - 9:00pm</td>
-			</tr>
-		</tbody>
-	</table>
+		<li class="title dayOfWeek">Monday <i class="fa fa-long-arrow-down"></i></li>
+		<div class="availabilityTimes">
+			<li class="bullet-item">
+
+				<div data-alert="" class="alert-box radius">
+				  	4:00am - 5:30am <a href="" class="close">×</a>
+				</div>
+			</li>
+		</div>
+		<li class="title dayOfWeek">Tuesday <i class="fa fa-long-arrow-down"></i></li>
+		<div class="availabilityTimes">
+			<li class="bullet-item">
+
+				<div data-alert="" class="alert-box radius">
+				  	4:00am - 5:30am <a href="" class="close">×</a>
+				</div>
+			</li>
+		</div>
+		<li class="title dayOfWeek">Wednesday <i class="fa fa-long-arrow-down"></i></li>
+		<div class="availabilityTimes">
+			<li class="bullet-item">
+
+				<div data-alert="" class="alert-box radius">
+				  	4:00am - 5:30am <a href="" class="close">×</a>
+				</div>
+			</li>
+		</div>
+		<li class="title dayOfWeek">Thursday <i class="fa fa-long-arrow-down"></i></li>
+		<div class="availabilityTimes">
+			<li class="bullet-item">
+
+				<div data-alert="" class="alert-box radius">
+				  	4:00am - 5:30am <a href="" class="close">×</a>
+				</div>
+			</li>
+		</div>
+		<li class="title dayOfWeek">Friday <i class="fa fa-long-arrow-down"></i></li>
+		<div class="availabilityTimes">
+			<li class="bullet-item">
+
+				<div data-alert="" class="alert-box radius">
+				  	4:00am - 5:30am <a href="" class="close">×</a>
+				</div>
+			</li>
+		</div>
+		<li class="title dayOfWeek">Saturday <i class="fa fa-long-arrow-down"></i></li>
+		<div class="availabilityTimes">
+			<li class="bullet-item">
+
+				<div data-alert="" class="alert-box radius">
+				  	4:00am - 5:30am <a href="" class="close">×</a>
+				</div>
+			</li>
+		</div>
+
+	</ul>
+
 </div>
