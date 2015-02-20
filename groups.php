@@ -37,7 +37,7 @@ foreach($user_groups as $id=>$group)
 
 			<div data-alert="" class="alert-box secondary group_tag person">
 			  <h4  data-group_id="<?php echo $id ?>"><?php echo $group ?></h4>
-			  <a href="" class="close">×</a>
+			  <a href="" data-group_id="<?php echo $id ?>" class="close">×</a>
 			</div>
             <br />
 	   </div>

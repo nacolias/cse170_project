@@ -37,8 +37,9 @@ require_once("dbconn.php");
 
     $(document).on('click', '#availability', function(evt){
         evt.preventDefault();
-        $.post("viewcurrent.php",{
-
+        $.post("functions.php",{
+            action: "get_availability",
+            username: "<?php echo $_SESSION['username']; ?>",
 
          },
         function(data) {
@@ -48,7 +49,7 @@ require_once("dbconn.php");
 
     $(document).on('click', '.dayOfWeek', function(evt){
         evt.preventDefault();
-        $(".availabilityTimes").slideToggle("fast");
+        $(this).find(".availabilityTimes").slideToggle("fast");
     });
 
     $(document).on('click', '#submittime', function(evt){
@@ -87,6 +88,19 @@ require_once("dbconn.php");
          },
         function(data) {
             $("#main_content").html(data);
+        });
+    });
+
+    $(document).on('click', '.group_tag a', function(evt){
+        evt.preventDefault();
+        $(this).parent().parent().hide("slow");
+        $.post("functions.php",{
+            action : 'remove_from_group',
+            gid : $(this).data('group_id'),
+
+        },
+        function(data) {
+            
         });
     });
 

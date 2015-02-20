@@ -142,7 +142,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
 
             <div class='row'>
                 <div class='small-centered small-8 columns profilePic'>
-                    <img src='" . ($row['img_directory'] == '' ? 'img/guy2.jpg' : $row['img_directory']) . "'/>
+                    <img data-username='" . $row['username'] . "' src='" . ($row['img_directory'] == '' ? 'img/guy2.jpg' : $row['img_directory']) . "'/>
                 </div>
             </div>
             
@@ -230,7 +230,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_group')
 
             <div class='row'>
                 <div class='small-centered small-8 columns profilePic'>
-                    <img src='" . ($row['img_directory'] == '' ? 'img/png/' . $rand_img_array[array_rand($rand_img_array)] : $row['img_directory']) . "'/>
+                    <img data-username='" . $row['username'] . "' src='" . ($row['img_directory'] == '' ? 'img/png/' . $rand_img_array[array_rand($rand_img_array)] : $row['img_directory']) . "'/>
                 </div>
             </div>
             <br />
@@ -281,15 +281,33 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'add_more_groups')
         $add_groups[$row['id']] = $row['name'];
     }
 
-    ?>
-    <div class="row">
-       <div class="columns small-8 small-centered">
-            <center>
-                <h4>Click A Group To Add</h4>
-            </center>
-       </div>
-    </div>
-    <?php
+    if(count($add_groups) > 0)
+    {
+
+
+        ?>
+        <div class="row">
+           <div class="columns small-8 small-centered">
+                <center>
+                    <h4>Click A Group To Add</h4>
+                </center>
+           </div>
+        </div>
+
+        <?php
+    }
+    else
+    {
+        ?>
+        <div class="row">
+           <div class="columns small-8 small-centered">
+                <center>
+                    <h4>You're in every group</h4>
+                </center>
+           </div>
+        </div>
+        <?php
+    }
 
 
     foreach($add_groups as $id=>$group)
@@ -306,6 +324,31 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'add_more_groups')
 
     <?php
     }
+
+}
+elseif(isset($_POST['action']) && $_POST['action'] == 'remove_from_group')
+{
+    $username = '';
+    $gid = '';
+    if(isset($_SESSION['username']))
+    {
+        $username = $_SESSION['username'];
+    }
+    else
+    {
+        die("NO USERNAME GIVEN");
+    }
+    if(isset($_POST['gid']) && $_POST['gid'] != '')
+    {
+        $gid = $_POST['gid'];
+    }
+    else
+    {
+        die("NO GROUP ID GIVEN");
+    }
+    $add_group_query = $dbconn->query("delete from enrollment where gid=$gid and username='$username'") or die("Failed to remove from group");
+
+    echo true;
 
 }
 elseif(isset($_POST['action']) && $_POST['action'] == 'add_a_group')
@@ -331,6 +374,68 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'add_a_group')
     $add_group_query = $dbconn->query("insert into enrollment (gid,username) values ($gid,'$username')") or die("Failed to add group");
 
     echo true;
+}
+elseif(isset($_POST['action']) && $_POST['action'] == 'get_availability')
+{
+    $day_array = array(
+                        'Sunday',
+                        'Monday',
+                        'Tuesday',
+                        'Wednesday',
+                        'Thursday',
+                        'Friday',
+                        'Saturday'
+                        );
+    $availability_array = array();
+    $username = '';
+    if(isset($_POST['username']) && $_POST['username'] != '')
+    {
+        $username = $_POST['username'];
+    }
+    else
+    {
+        die("NO USERNAME GIVEN");
+    }
+
+
+    $get_availability_query = $dbconn->query("select * from schedules where username='$username' order by day_of_week,start_time,end_time") or die("Failed to add group");
+    while($row = $get_availability_query->fetch_assoc())
+    {
+        $availability_array[$row['day_of_week']][$row['id']] = date('h:i A', strtotime($row['start_time'])) . ' - ' . date('h:i A', strtotime($row['end_time']));
+    }
+    //echo print_r($availability_array);
+
+    echo "
+    <div class='columns small-12'>
+        <ul class='pricing-table'>";
+
+    foreach ($availability_array as $day_of_week => $times_array) 
+    {
+        echo "
+            <div class='dayOfWeek'>
+                <li class='title'>" . $day_array[$day_of_week] . "<i class='fa fa-long-arrow-down'></i></li>
+                <div class='availabilityTimes'>
+                    <li class='bullet-item'>";
+                    foreach ($times_array as $key => $value) 
+                    {
+                        echo "<div data-alert='' class='alert-box radius'>$value"; 
+                                    if($username == $_SESSION['username'])
+                                    {
+                                        echo "<a data-schedule_row_id='" . $key . "'  href='' class='close'>×</a>";
+                                    } 
+                                    echo "
+                            </div>";
+                    }
+            echo "
+                    </li>
+                </div>
+            </div>
+        ";
+    }
+
+    echo "
+        </ul>
+    </div>";
 
 }
 
