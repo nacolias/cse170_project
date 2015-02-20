@@ -104,6 +104,30 @@ require_once("dbconn.php");
         });
     });
 
+    $(document).on('click', '.profile_pics', function(evt){
+        evt.preventDefault();
+        var username = $(this).data('username');
+        $.post("functions.php",{
+            action : 'get_availability',
+            username : $(this).data('username'),
+         },
+        function(data) {
+            $("#" + username).find(".person_availability").html(data);
+        });
+    });
+
+    $(document).on('click', '.delete_availability', function(evt){
+        evt.preventDefault();
+        $(this).parent().hide("slow");
+        $.post("functions.php",{
+            action : 'delete_availability',
+            sched_id: $(this).data('schedule_row_id'),
+         },
+        function(data) {
+            
+        });
+    });
+
     $(document).on('click', '.group_tag h4', function(evt){
         evt.preventDefault();
         $.post("functions.php",{

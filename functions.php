@@ -123,7 +123,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
     {
 
         $people_html .= 
-        "<div class='person'>
+        "<div class='person' id='" . $row['username'] . "'>
             <div class='row'>
                 <div class='small-centered small-8 columns'>
                     <h4>" . $row['fname'] . " " . $row['lname'] . "</h4>
@@ -142,7 +142,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
 
             <div class='row'>
                 <div class='small-centered small-8 columns profilePic'>
-                    <img data-username='" . $row['username'] . "' src='" . ($row['img_directory'] == '' ? 'img/guy2.jpg' : $row['img_directory']) . "'/>
+                    <img class='profile_pics' data-username='" . $row['username'] . "' src='" . ($row['img_directory'] == '' ? 'img/guy2.jpg' : $row['img_directory']) . "'/>
                 </div>
             </div>
             
@@ -159,6 +159,8 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
                         <a href=mailto:'" . $row['username'] . "@ucsd.edu' class='small right button'>Email</a>
                     </center>
                 </div>
+            </div>
+            <div class='row person_availability'>
             </div>
         </div>";
 
@@ -211,7 +213,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_group')
     {
 
         $people_html .= 
-        "<div class='person'>
+        "<div class='person' id='" . $row['username'] . "'>
             <div class='row'>
                 <div class='small-centered small-8 columns'>
                     <h4>" . $row['fname'] . " " . $row['lname'] . "</h4>
@@ -230,7 +232,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_group')
 
             <div class='row'>
                 <div class='small-centered small-8 columns profilePic'>
-                    <img data-username='" . $row['username'] . "' src='" . ($row['img_directory'] == '' ? 'img/png/' . $rand_img_array[array_rand($rand_img_array)] : $row['img_directory']) . "'/>
+                    <img class='profile_pics' data-username='" . $row['username'] . "' src='" . ($row['img_directory'] == '' ? 'img/png/' . $rand_img_array[array_rand($rand_img_array)] : $row['img_directory']) . "'/>
                 </div>
             </div>
             <br />
@@ -242,6 +244,8 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_group')
                         <a href=mailto:'" . $row['username'] . "@ucsd.edu' class='small right button'>Email</a>
                     </center>
                 </div>
+            </div>
+            <div class='row person_availability'>
             </div>
         </div>";
 
@@ -421,13 +425,11 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_availability')
                         echo "<div data-alert='' class='alert-box radius'>$value"; 
                                     if($username == $_SESSION['username'])
                                     {
-                                        echo "<a data-schedule_row_id='" . $key . "'  href='' class='close'>×</a>";
+                                        echo "<a data-schedule_row_id='" . $key . "'  href='' class='close delete_availability'>×</a>";
                                     } 
-                                    echo "
-                            </div>";
+                        echo "</div>";
                     }
-            echo "
-                    </li>
+            echo "</li>
                 </div>
             </div>
         ";
@@ -436,6 +438,30 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_availability')
     echo "
         </ul>
     </div>";
+
+}
+elseif(isset($_POST['action']) && $_POST['action'] == 'delete_availability')
+{
+    $sched_id = '';
+    if(isset($_SESSION['username']))
+    {
+        $username = $_SESSION['username'];
+    }
+    else
+    {
+        die("NO USERNAME GIVEN");
+    }
+    if(isset($_POST['sched_id']) && $_POST['sched_id'] != '')
+    {
+        $sched_id = $_POST['sched_id'];
+    }
+    else
+    {
+        die("NO sched_id ID GIVEN");
+    }
+    $add_group_query = $dbconn->query("delete from schedules where id=$sched_id") or die("Failed to remove from schedule entry");
+
+    echo true;
 
 }
 
