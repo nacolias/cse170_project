@@ -289,7 +289,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'add_more_groups')
             </center>
        </div>
     </div>
-    <?
+    <?php
 
 
     foreach($add_groups as $id=>$group)
@@ -306,7 +306,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'add_more_groups')
 
     <?php
     }
-    //THE ERROR USED TO BE RIGHT HERE
+
 }
 elseif(isset($_POST['action']) && $_POST['action'] == 'add_a_group')
 {
@@ -329,8 +329,12 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'add_a_group')
         die("NO GROUP ID GIVEN");
     }
     $add_group_query = $dbconn->query("insert into enrollment (gid,username) values ($gid,'$username')") or die("Failed to add group");
+
     echo true;
+
 }
+
+
 
 ?>
 
