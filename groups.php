@@ -28,18 +28,17 @@ while($row = $usergroups_query_result->fetch_assoc())
 	   </div>
 	</div>
 
-<?
+<?php
 foreach($user_groups as $id=>$group)
 {
 ?>
 	<div class="row">
-	   <div class="columns small-8 small-centered person">
-	        <div class="columns small-9 left group_tag">
-                <h4  data-group_id="<?php echo $id ?>"><?php echo $group ?></h4>
-            </div>
-            <div class="columns small-3 right">
-                <i class="fa fa-minus"></i>
-            </div>
+	   <div class="columns small-8 small-centered">
+
+			<div data-alert="" class="alert-box secondary group_tag person">
+			  <h4  data-group_id="<?php echo $id ?>"><?php echo $group ?></h4>
+			  <a href="" class="close">×</a>
+			</div>
             <br />
 	   </div>
 	</div>
