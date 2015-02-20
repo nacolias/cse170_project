@@ -75,6 +75,16 @@ require_once("dbconn.php");
         }
     });
 
+    $(document).on('click', '#add_more_groups', function(evt){
+        evt.preventDefault();
+        $.post("functions.php",{
+            action : 'add_more_groups',
+         },
+        function(data) {
+            $("#main_content").html(data);
+        });
+    });
+
     $(document).on('click', '.group_tag h4', function(evt){
         evt.preventDefault();
         $.post("functions.php",{
@@ -84,6 +94,22 @@ require_once("dbconn.php");
          },
         function(data) {
             $("#main_content").html(data);
+        });
+    });
+
+    $(document).on('click', '.add_group_tag h4', function(evt){
+        evt.preventDefault();
+        $(this).parent().parent().hide("slow");
+        $.post("functions.php",{
+            action : 'add_a_group',
+            gid : $(this).data('group_id'),
+
+         },
+        function(data) {
+            if(data)
+            {
+                alert("Added Group!");
+            }
         });
     });
 
@@ -106,16 +132,6 @@ require_once("dbconn.php");
             });
         });
 
-        $("#groups").click(function(evt){
-            evt.preventDefault();
-            $.post("homepage.php",{
- 
-             },
-            function(data) {
-                $("#main_content").html(data);
-            });
-        });
-
         $("#settings").click(function(evt){
             evt.preventDefault();
             $.post("settingspage.php",{
@@ -125,7 +141,6 @@ require_once("dbconn.php");
                 $("#main_content").html(data);
             });
         });
-
 
         $("#groups").click(function(evt){
             evt.preventDefault();

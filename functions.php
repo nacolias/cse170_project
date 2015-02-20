@@ -102,6 +102,8 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'add_availability')
 elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available')
 {
 
+    $rand_img_array = array_diff(scandir('img/png/'), array('..', '.','.DS_Store'));
+
     //$return_json_array = array();
 
     $username = '';
@@ -181,6 +183,8 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
 }
 elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_group')
 {
+
+    $rand_img_array = array_diff(scandir('img/png/'), array('..', '.','.DS_Store'));
     $username = '';
     $group_id = '';
     if(isset($_SESSION['username']))
@@ -200,7 +204,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_group')
         die("NO GROUP ID GIVEN");
     }
 
-    $people_query = $dbconn->query("select * from people,enrollment where people.username=enrollment.username and gid=$gid and people.username!='$username' and is_active") or die("Failed to get all active");
+    $people_query = $dbconn->query("select * from people,enrollment where people.username=enrollment.username and gid=$gid and people.username!='$username' and is_active") or die("Failed to get all group");
 
     $people_html = '';
     while($row = $people_query->fetch_assoc())
@@ -226,7 +230,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_group')
 
             <div class='row'>
                 <div class='small-centered small-8 columns profilePic'>
-                    <img src='" . ($row['img_directory'] == '' ? 'img/guy2.jpg' : $row['img_directory']) . "'/>
+                    <img src='" . ($row['img_directory'] == '' ? 'img/png/' . $rand_img_array[array_rand($rand_img_array)] : $row['img_directory']) . "'/>
                 </div>
             </div>
             <br />
@@ -258,6 +262,76 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_group')
        echo $people_html; 
     }
     
+}
+elseif(isset($_POST['action']) && $_POST['action'] == 'add_more_groups')
+{
+    $username = '';
+    if(isset($_SESSION['username']))
+    {
+        $username = $_SESSION['username'];
+    }
+    else
+    {
+        die("NO USERNAME GIVEN");
+    }
+
+    $groups_query = $dbconn->query("select * from groups where id not in (select gid as id from enrollment where username='" . $username . "')") or die("Failed to get all groups to add");
+    while($row = $groups_query->fetch_assoc())
+    {
+        $add_groups[$row['id']] = $row['name'];
+    }
+
+    ?>
+    <div class="row">
+       <div class="columns small-8 small-centered">
+            <center>
+                <h4>Click A Group To Add</h4>
+            </center>
+       </div>
+    </div>
+    <?
+
+
+    foreach($add_groups as $id=>$group)
+    {
+    ?>
+        <div class="row">
+           <div class="columns small-8 small-centered person">
+                <div class="columns small-9 left add_group_tag">
+                        <h4  data-group_id="<?php echo $id ?>"><?php echo $group ?></h4>
+                </div>
+                <br />
+           </div>
+        </div>
+
+    <?php
+    }
+
+}
+elseif(isset($_POST['action']) && $_POST['action'] == 'add_a_group')
+{
+    $username = '';
+    $gid = '';
+    if(isset($_SESSION['username']))
+    {
+        $username = $_SESSION['username'];
+    }
+    else
+    {
+        die("NO USERNAME GIVEN");
+    }
+    if(isset($_POST['gid']) && $_POST['gid'] != '')
+    {
+        $gid = $_POST['gid'];
+    }
+    else
+    {
+        die("NO GROUP ID GIVEN");
+    }
+    $add_group_query = $dbconn->query("insert into enrollment (gid,username) values ($gid,'$username')") or die("Failed to add group");
+
+    echo true;
+
 }
 
 

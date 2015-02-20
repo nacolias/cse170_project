@@ -19,7 +19,16 @@ while($row = $usergroups_query_result->fetch_assoc())
 {
 	$user_groups[$row['gid']] = $row['name'];
 }
+?>
+	<div class="row">
+	   <div class="columns small-8 small-centered">
+	   		<center>
+				<h4>Your Groups</h4>
+	   		</center>
+	   </div>
+	</div>
 
+<?
 foreach($user_groups as $id=>$group)
 {
 ?>
@@ -41,6 +50,6 @@ foreach($user_groups as $id=>$group)
 
 <div class="row">
     <div class="columns small-8 small-centered addGroup">
-        <center><h5 class="subheader">Add More Groups</h5></center>
+        <center><h5 class="subheader" id="add_more_groups">Add More Groups</h5></center>
     </div>
 </div>
