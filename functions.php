@@ -289,7 +289,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'add_more_groups')
             </center>
        </div>
     </div>
-    <?
+    <?php
 
 
     foreach($add_groups as $id=>$group)
@@ -298,7 +298,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'add_more_groups')
         <div class="row">
            <div class="columns small-8 small-centered person">
                 <div class="columns small-9 left add_group_tag">
-                        <h4  data-group_id="<?php echo $id ?>"><?php echo $group ?></h4>
+                        <h4  data-group_id="<?php echo $id;?>"><?php echo $group; ?></h4>
                 </div>
                 <br />
            </div>
