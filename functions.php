@@ -142,7 +142,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
 
             <div class='row'>
                 <div class='small-centered small-8 columns profilePic'>
-                    <img class='profile_pics' data-username='" . $row['username'] . "' src='" . ($row['img_directory'] == '' ? 'img/guy2.jpg' : $row['img_directory']) . "'/>
+                    <img class='profile_pics' data-username='" . $row['username'] . "' src='" . ($row['img_directory'] == '' ? 'img/png/' . $rand_img_array[array_rand($rand_img_array)] : $row['img_directory']) . "'/>
                 </div>
             </div>
             
@@ -417,7 +417,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_availability')
     {
         echo "
             <div class='dayOfWeek'>
-                <li class='title'>" . $day_array[$day_of_week] . "<i class='fa fa-long-arrow-down'></i></li>
+                <li class='title'>" . $day_array[$day_of_week - 1] . "<i class='fa fa-long-arrow-down'></i></li>
                 <div class='availabilityTimes'>
                     <li class='bullet-item'>";
                     foreach ($times_array as $key => $value) 
