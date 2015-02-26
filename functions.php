@@ -40,13 +40,13 @@ if(isset($_POST['action']) && $_POST['action'] == 'update_info')
     {
     	$phone_number = $_POST['phone_number'];
     }
-    if(isset($_POST['file']))
+    if(isset($_POST['img_directory']))
     {
-    	$file = $_POST['file'];
+    	$img_directory = $_POST['img_directory'];
     }
 
-
-	$dbconn->query("update people set fname='$fname',lname='$lname',major='$major',phone_number='$phone_number',img_directory='$file' where username='" . $_SESSION['username'] . "'") or die("Failed to update user info");
+    echo "update people set fname='$fname',lname='$lname',major='$major',phone_number='$phone_number',img_directory='$img_directory' where username='" . $_SESSION['username'] . "'";
+	$dbconn->query("update people set fname='$fname',lname='$lname',major='$major',phone_number='$phone_number',img_directory='$img_directory' where username='" . $_SESSION['username'] . "'") or die("Failed to update user info");
 
 	return true;
 
@@ -116,7 +116,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
         die("NO USERNAME GIVEN");
     }
 
-    $people_query = $dbconn->query("select people.*, end_time from enrollment,people,schedules where gid in (select gid from enrollment where username = '$username') and enrollment.username!='$username' and enrollment.username=people.username and schedules.username=people.username and dayofweek(NOW())=day_of_week and curtime() between start_time and end_time and is_active") or die("Failed to get all active");
+    $people_query = $dbconn->query("select people.*, end_time from enrollment,people,schedules where gid in (select gid from enrollment where username = '$username') and enrollment.username!='$username' and enrollment.username=people.username and schedules.username=people.username and dayofweek(NOW())=day_of_week and curtime() between start_time and end_time and is_active group by username") or die("Failed to get all active");
 
     $people_html = '';
     while($row = $people_query->fetch_assoc())

@@ -66,10 +66,11 @@ while($row = $userinfo_query_result->fetch_assoc())
         lname : $("#lname").val(),
         major : $("#major option:selected").text(),
         phone_number : $("#phone").val(),
-        img_directory : $("#file").val(),
+        img_directory : $("#img_directory").val(),
        },
       function(data) {
           alert("Success!");
+          console.log(data);
           window.location.replace("index.php");
       });
       
@@ -157,7 +158,7 @@ while($row = $userinfo_query_result->fetch_assoc())
         </div>
 
         <div class="small-6 columns left">
-          <input id="file" type="file" name="file">
+          <input id="img_directory" type="text" name="img_directory" <?php if($img_directory != '') echo "value='$img_directory'";?> placeholder="Profile Picture Image Link (http://test.com/img.jpg)">
         </div>
       </div>
 
