@@ -12,7 +12,7 @@
 			</div>
 		</div>
 		<div class='dayOfWeek'>
-			<li class='title'>Monday <i class='fa fa-long-arrow-down'></i></li>
+			<li class='title'>Monday <i class='fa fa-caret-down right'></i></li>
 			<div class='availabilityTimes'>
 				<li class='bullet-item'>
 
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 		<div class='dayOfWeek'>
-			<li class='title'>Tuesday <i class='fa fa-long-arrow-down'></i></li>
+			<li class='title'>Tuesday <i class='fa fa-caret-down right'></i></li>
 			<div class='availabilityTimes'>
 				<li class='bullet-item'>
 
@@ -34,7 +34,7 @@
 			</div>
 		</div>
 		<div class='dayOfWeek'>
-			<li class='title'>Wednesday <i class='fa fa-long-arrow-down'></i></li>
+			<li class='title'>Wednesday <i class='fa fa-caret-down right'></i></li>
 			<div class='availabilityTimes'>
 				<li class='bullet-item'>
 
@@ -45,7 +45,7 @@
 			</div>
 		</div>
 		<div class='dayOfWeek'>
-			<li class='title'>Thursday <i class='fa fa-long-arrow-down'></i></li>
+			<li class='title'>Thursday <i class='fa fa-caret-down right'></i></li>
 			<div class='availabilityTimes'>
 				<li class='bullet-item'>
 
@@ -56,7 +56,7 @@
 			</div>
 		</div>
 		<div class='dayOfWeek'>
-			<li class='title'>Friday <i class='fa fa-long-arrow-down'></i></li>
+			<li class='title'>Friday <i class='fa fa-caret-down right'></i></li>
 			<div class='availabilityTimes'>
 				<li class='bullet-item'>
 
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 		<div class='dayOfWeek'>
-			<li class='title'>Saturday <i class='fa fa-long-arrow-down'></i></li>
+			<li class='title'>Saturday <i class='fa fa-caret-down right'></i></li>
 			<div class='availabilityTimes'>
 				<li class='bullet-item'>
 

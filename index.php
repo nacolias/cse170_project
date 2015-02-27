@@ -49,7 +49,19 @@ require_once("dbconn.php");
 
     $(document).on('click', '.dayOfWeek', function(evt){
         evt.preventDefault();
+        var buttoncolor = $(this).css("background-color");
         $(this).find(".availabilityTimes").slideToggle("fast");
+        
+        if($(this).find(".fa").hasClass("fa-caret-down")){
+            $(this).find(".fa").removeClass("fa-caret-down").addClass("fa-caret-left");
+        }else{
+            $(this).find(".fa").removeClass("fa-caret-left").addClass("fa-caret-down");
+        }
+        /*if(buttoncolor == "rgb(246, 246, 246)"){
+            $(this).css("background-color", "white");
+        }else{
+            $(this).css("background-color", "#F6F6F6");
+        }*/
     });
 
     $(document).on('click', '#submittime', function(evt){

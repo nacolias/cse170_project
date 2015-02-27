@@ -417,7 +417,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_availability')
     {
         echo "
             <div class='dayOfWeek'>
-                <li class='title'>" . $day_array[$day_of_week - 1] . "<i class='fa fa-long-arrow-down'></i></li>
+                <li class='title'>" . $day_array[$day_of_week - 1] . "<i class='fa fa-caret-down right'></i></li>
                 <div class='availabilityTimes'>
                     <li class='bullet-item'>";
                     foreach ($times_array as $key => $value) 
