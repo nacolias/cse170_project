@@ -100,7 +100,28 @@ require_once("dbconn.php");
 
              },
             function(data) {
-                $("#availabilitytable").html(data);
+                $("#availabilitytable").empty().append(data);
+                if(days_checked[0]){
+                    $(".day_Sunday").parent().find(".availabilityTimes").slideToggle("fast");
+                }
+                if(days_checked[1]){
+                    $(".day_Monday").parent().find(".availabilityTimes").slideToggle("fast");
+                }                
+                if(days_checked[2]){
+                    $(".day_Tuesday").parent().find(".availabilityTimes").slideToggle("fast");
+                }                
+                if(days_checked[3]){
+                    $(".day_Wednesday").parent().find(".availabilityTimes").slideToggle("fast");
+                }                
+                if(days_checked[4]){
+                    $(".day_Thursday").parent().find(".availabilityTimes").slideToggle("fast");
+                }                
+                if(days_checked[5]){
+                    $(".day_Friday").parent().find(".availabilityTimes").slideToggle("fast");
+                }                
+                if(days_checked[6]){
+                    $(".day_Saturday").parent().find(".availabilityTimes").slideToggle("fast");
+                }
             });
 
         }
@@ -206,7 +227,7 @@ require_once("dbconn.php");
 
              },
             function(data) {
-                $("#main_content").html(data);
+                $("#main_content").empty().append(data);
             });
 
             $.post("functions.php",{
@@ -215,7 +236,7 @@ require_once("dbconn.php");
 
              },
             function(data) {
-                $("#availabilitytable").html(data);
+                $("#availabilitytable").empty().append(data);
             });
 
         });
