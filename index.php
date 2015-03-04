@@ -1,14 +1,17 @@
 <?php
 session_start();
+$cur_directory = preg_split('/(\/|\\?)/', getcwd());
+$cur_directory = $cur_directory[count($cur_directory)-1];
+
 if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
 {
   // check their log in time
   if(time() >= $_SESSION['logout_time'])
-    header("Location:http://$_SERVER[HTTP_HOST]/time-space/logout.php");
+    header("Location: http://$_SERVER[HTTP_HOST]/" . $cur_directory . "/logout.php");
 }
 else
 {
-  header("Location:http://$_SERVER[HTTP_HOST]/time-space/login.php");
+  header("Location: http://$_SERVER[HTTP_HOST]/" . $cur_directory . "/login.php");
 }
 
 require_once("dbconn.php");
@@ -32,8 +35,6 @@ require_once("dbconn.php");
     <script src='validate.js'></script>
 
     <script>
-
-
 
     $(document).on('click', '#availability', function(evt){
         evt.preventDefault();
@@ -68,6 +69,8 @@ require_once("dbconn.php");
         evt.preventDefault();
         if(validateForm())
         {
+            var days_checked = [$("#sunday").is(':checked'), $("#monday").is(':checked'), $("#tuesday").is(':checked'), $("#wednesday").is(':checked'), $("#thursday").is(':checked'), $("#friday").is(':checked'), $("#saturday").is(':checked')];
+
             $.post("functions.php",{
                 action: 'add_availability',
                 sunday: $("#sunday").is(':checked'),
@@ -90,6 +93,16 @@ require_once("dbconn.php");
             function(data) {
                 $("#main_content").html(data);
             });
+
+            $.post("functions.php",{
+            action: "get_availability",
+            username: "<?php echo $_SESSION['username']; ?>",
+
+             },
+            function(data) {
+                $("#availabilitytable").html(data);
+            });
+
         }
     });
 
@@ -195,6 +208,16 @@ require_once("dbconn.php");
             function(data) {
                 $("#main_content").html(data);
             });
+
+            $.post("functions.php",{
+            action: "get_availability",
+            username: "<?php echo $_SESSION['username']; ?>",
+
+             },
+            function(data) {
+                $("#availabilitytable").html(data);
+            });
+
         });
 
         $("#groups").click(function(evt){

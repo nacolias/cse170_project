@@ -1,4 +1,6 @@
 <?php
+$cur_directory = preg_split('/(\/|\\?)/', getcwd());
+$cur_directory = $cur_directory[count($cur_directory)-1];
 session_start();
 if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
 {
@@ -8,7 +10,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
   {
     $direction = "logout.php";
   }
-  header("Location: http://$_SERVER[HTTP_HOST]/time-space/$direction");
+  header("Location: http://$_SERVER[HTTP_HOST]/" . $cur_directory . "/$direction");
   exit;
 }
 //require "/var/www/html/jump/filter_users.php";
@@ -123,7 +125,9 @@ require "dbconn.php";
           </div>
       </div>
   </form>
-  <div id="errors">
+  <center>
+    <div id="errors">
+  </center>
   </div>
 </div>
 

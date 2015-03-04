@@ -4,11 +4,11 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
 {
   // check their log in time
   if(time() >= $_SESSION['logout_time'])
-    header("Location:http://$_SERVER[HTTP_HOST]/time-space/logout.php");
+    header("Location: http://$_SERVER[HTTP_HOST]/" . $cur_directory . "/logout.php");
 }
 else
 {
-  header("Location:http://$_SERVER[HTTP_HOST]/time-space/login.php");
+  header("Location: http://$_SERVER[HTTP_HOST]/" . $cur_directory . "/login.php");
 }
 
 require_once("dbconn.php");

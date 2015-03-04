@@ -9,6 +9,9 @@
         <div class="small-10 small-centered columns person">
           <center><h4>Availability</h4></center>
           <br />
+          <div id="availabilitytable" class="row">
+          </div>
+          <br />
           <br />
 
           <center>
@@ -37,8 +40,7 @@
           <div class="row">
             <div class="small-centered small-10 columns buttonarea">
                 <center>
-                    <a id="availability" class="small left button">View Current</a>
-                    <a id="submittime" class="small right button">Submit</a>
+                    <a id="submittime" class="small center button">Submit</a>
                 </center>
             </div>
 
