@@ -48,6 +48,7 @@
 }
 
 .top-bar{
+	background-color: #67727A;
     padding-right:2%;
 }
 
@@ -102,4 +103,6 @@
 
 .availabilityTimes{
     display: none;
+}
+body { background-color: #E9E0D6;
 }
