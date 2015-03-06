@@ -22,6 +22,19 @@ require_once("dbconn.php");
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60450403-1', { 'userId' : "<?php echo $_SESSION['username']; ?>"});
+      //ga('set', '&uid', "<?php echo $_SESSION['username']; ?>"); // Set the user ID using signed-in user_id.
+      ga('send', 'pageview');
+
+
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Time Space</title>
@@ -33,6 +46,8 @@ require_once("dbconn.php");
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src='validate.js'></script>
+
+
 
     <script>
 
@@ -70,6 +85,23 @@ require_once("dbconn.php");
         if(validateForm())
         {
             var days_checked = [$("#sunday").is(':checked'), $("#monday").is(':checked'), $("#tuesday").is(':checked'), $("#wednesday").is(':checked'), $("#thursday").is(':checked'), $("#friday").is(':checked'), $("#saturday").is(':checked')];
+            // woopra.track("add_availability", {
+            //     sunday: $("#sunday").is(':checked'),
+            //     monday: $("#monday").is(':checked'),
+            //     tuesday: $("#tuesday").is(':checked'),
+            //     wednesday: $("#wednesday").is(':checked'),
+            //     thursday: $("#thursday").is(':checked'),
+            //     friday: $("#friday").is(':checked'),
+            //     saturday: $("#saturday").is(':checked'),
+            //     start_time: $("#starttime").val(),
+            //     end_time: $("#endtime").val(),
+            // });
+            ga('send', {
+              'hitType': 'event',          // Required.
+              'eventCategory': 'button',   // Required.
+              'eventAction': 'click',      // Required.
+              'eventLabel': 'add_availability'
+            });
 
             $.post("functions.php",{
                 action: 'add_availability',
@@ -98,7 +130,7 @@ require_once("dbconn.php");
             action: "get_availability",
             username: "<?php echo $_SESSION['username']; ?>",
 
-             },
+            },
             function(data) {
                 $("#availabilitytable").empty().append(data);
                 if(days_checked[0]){
@@ -123,7 +155,6 @@ require_once("dbconn.php");
                     $(".day_Saturday").parent().find(".availabilityTimes").slideToggle("fast");
                 }
             });
-
         }
     });
 
@@ -158,12 +189,24 @@ require_once("dbconn.php");
             username : $(this).data('username'),
          },
         function(data) {
+            $("#" + username).find(".person_availability").toggle();
             $("#" + username).find(".person_availability").html(data);
+
         });
     });
 
     $(document).on('click', '.delete_availability', function(evt){
         evt.preventDefault();
+        // woopra.track("removed_availability", {
+        //     sched_id: $(this).data('schedule_row_id')
+        // });
+        ga('send', {
+          'hitType': 'event',          // Required.
+          'eventCategory': 'button',   // Required.
+          'eventAction': 'click',      // Required.
+          'eventLabel': 'delete_availability',
+          'eventValue': $(this).data('schedule_row_id')
+        });
         $(this).parent().hide("slow");
         $.post("functions.php",{
             action : 'delete_availability',
@@ -188,6 +231,16 @@ require_once("dbconn.php");
 
     $(document).on('click', '.add_group_tag h4', function(evt){
         evt.preventDefault();
+        ga('send', {
+          'hitType': 'event',          // Required.
+          'eventCategory': 'button',   // Required.
+          'eventAction': 'click',      // Required.
+          'eventLabel': 'add_group',
+          'eventValue': $(this).data('group_id')
+        });
+        // woopra.track("added_group", {
+        //     gid : $(this).data('group_id')
+        // });
         $(this).parent().parent().hide("slow");
         $.post("functions.php",{
             action : 'add_a_group',
@@ -213,6 +266,7 @@ require_once("dbconn.php");
 
         $("#home").click(function(evt){
             evt.preventDefault();
+            // woopra.track("click_view_homepage", {});
             $.post("functions.php",{
                 action: 'get_all_current_available',
              },
@@ -223,6 +277,11 @@ require_once("dbconn.php");
 
         $("#settings").click(function(evt){
             evt.preventDefault();
+            ga('send', 'pageview', {
+              'page': '/dev-time-space/settingspage.php',
+              'title': 'settingspage'
+            });
+            //woopra.track("click_view_settings_page", {});
             $.post("settingspage.php",{
 
              },
@@ -243,6 +302,10 @@ require_once("dbconn.php");
 
         $("#groups").click(function(evt){
             evt.preventDefault();
+            ga('send', 'pageview', {
+              'page': '/dev-time-space/groups.php',
+              'title': 'groups'
+            });
             $.post("groups.php",{
 
              },
