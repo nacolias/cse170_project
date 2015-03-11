@@ -170,14 +170,38 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
 
     if($people_html == '')
     {
-        echo "            
-            <div class='row'>
-                <div class='small-centered small-8 columns profilePic'>
-                    <center>
-                        <h4>Nobody Currently Available</h4>
-                    </center>
-                </div>
-            </div>";
+        $groups_counter = 0;
+        $groups_query  = $dbconn->query("select * from enrollment where username='$username'");
+        while ($row = $groups_query->fetch_assoc())
+        {
+            $groups_counter++;
+        }
+        if($groups_counter == 0)
+        {
+            echo  
+                "<div class='row'>
+                    <div class='small-centered small-8 columns profilePic'>
+                        <center>
+                            <h4>It looks like you aren't in any groups, 
+                                <a href='#' id='add_more_groups'>click here to add some</a>
+                            </h4>
+                        </center>
+                    </div>
+                </div>";
+
+        }
+        else
+        {
+            echo 
+                "<div class='row'>
+                    <div class='small-centered small-8 columns profilePic'>
+                        <center>
+                            <h4>Nobody Currently Available</h4>
+                        </center>
+                    </div>
+                </div>";
+        }
+
     }
     else
     {
