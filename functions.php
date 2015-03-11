@@ -117,6 +117,21 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
     {
         die("NO USERNAME GIVEN");
     }
+    //get the groups for everyone before the printout
+    $peoples_groups = array();
+    $people_groups_query = $dbconn->query("select people.username as username,groups.name as group_name from enrollment,people,schedules,groups where gid in (select gid from enrollment where username = '$username') and enrollment.username!='$username' and enrollment.username=people.username and schedules.username=people.username and enrollment.gid=groups.id and dayofweek(NOW())=day_of_week and curtime() between start_time and end_time and is_active") or die("Failed to get groups for all active");
+    while($row = $people_groups_query->fetch_assoc())
+    {
+
+        $peoples_groups[$row['username']] .= $row['group_name'] . ', ';
+    }
+    //print_r($peoples_groups);
+    foreach ($peoples_groups as $key => $value) 
+    {
+        $peoples_groups[$key] = rtrim($value, ', ');
+    }
+
+
 
     $people_query = $dbconn->query("select people.*, end_time from enrollment,people,schedules where gid in (select gid from enrollment where username = '$username') and enrollment.username!='$username' and enrollment.username=people.username and schedules.username=people.username and dayofweek(NOW())=day_of_week and curtime() between start_time and end_time and is_active group by username") or die("Failed to get all active");
 
@@ -133,14 +148,24 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
             </div>
             
             <div class='row details'>
-                    <div class='small-centered small-8 columns'>
-                        <h4 class='text-left left'>
-                            <small>
-                                Major:" . $row['major'] . "
-                            </small>
-                        </h4>
-                    </div>
+                <div class='small-centered small-8 columns'>
+                    <h4 class='text-left left'>
+                        <small>
+                            Major : " . $row['major'] . "
+                        </small>
+                    </h4>
                 </div>
+            </div>
+
+            <div class='row details'>
+                <div class='small-centered small-8 columns'>
+                    <h4 class='text-left left'>
+                        <small>
+                            Groups : " . $peoples_groups[$row['username']] . "
+                        </small>
+                    </h4>
+                </div>
+            </div>
 
             <div class='row'>
                 <div class='small-centered small-8 columns profilePic'>
