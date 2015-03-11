@@ -1,15 +1,17 @@
 <?php
+$cur_directory = preg_split('/(\/|\\?)/', getcwd());
+$cur_directory = $cur_directory[count($cur_directory)-1];
 
 session_start();
 if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'])
 {
   // check their log in time
   if(time() >= $_SESSION['logout_time'])
-    header("Location:http://$_SERVER[HTTP_HOST]/time-space/logout.php");
+    header("Location: http://$_SERVER[HTTP_HOST]/" . $cur_directory . "/logout.php");
 }
 else
 {
-  header("Location:http://$_SERVER[HTTP_HOST]/time-space/login.php");
+  header("Location: http://$_SERVER[HTTP_HOST]/" . $cur_directory . "/login.php");
 }
 
 require_once("dbconn.php");
@@ -417,7 +419,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_availability')
     {
         echo "
             <div class='dayOfWeek'>
-                <li class='title'>" . $day_array[$day_of_week - 1] . "<i class='fa fa-caret-down right'></i></li>
+                <li class='title day_" . $day_array[$day_of_week - 1] . "'>" . $day_array[$day_of_week - 1] . "<i class='fa fa-caret-down right'></i></li>
                 <div class='availabilityTimes'>
                     <li class='bullet-item'>";
                     foreach ($times_array as $key => $value) 
