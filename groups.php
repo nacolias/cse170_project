@@ -23,7 +23,7 @@ while($row = $usergroups_query_result->fetch_assoc())
 	<div class="row">
 	   <div class="columns small-8 small-centered">
 	   		<center>
-				<h4>Your Groups</h4>
+				<h1 style="color:white">Your Groups</h1>
 	   		</center>
 	   </div>
 	</div>
@@ -48,7 +48,7 @@ foreach($user_groups as $id=>$group)
 ?>
 
 <div class="row">
-    <div class="columns small-8 small-centered addGroup">
+    <div class="columns small-8 small-centered person addGroup">
         <center><h5 class="subheader" id="add_more_groups">Add More Groups</h5></center>
     </div>
 </div>

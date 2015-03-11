@@ -1,10 +1,10 @@
 
 /*Formatting for the individual "post-it's"*/
 .person{
-    margin:20px;
-    padding:10px;
-    box-shadow: 1px 5px 10px gray;
-    background-color: #F9F9F9;
+    margin:0 10% 5% 10%;
+    padding:2%;
+    box-shadow: 1px 5px 10px black;
+    background-color: white;
     border-radius: .5em;
 }
 
@@ -44,6 +44,7 @@
 
 .profilePic img{
     width:100%;
+    margin:0;
     border-radius: .5em;
     filter: gray;
     -webkit-filter: grayscale(50%);
@@ -52,7 +53,7 @@
 }
 
 .top-bar{
-	background-color: #67727A;
+	background-color: rgba(0,0,0,.75);
     padding-right:2%;
 }
 
@@ -108,5 +109,10 @@
 .availabilityTimes{
     display: none;
 }
-body { background-color: #E9E0D6;
+body { 
+    background-image: url("../img/dark_wood.png");
+    background-repeat: repeat;
+}
+html{
+	
 }
