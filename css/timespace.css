@@ -45,6 +45,10 @@
 .profilePic img{
     width:100%;
     border-radius: .5em;
+    filter: gray;
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
+
 }
 
 .top-bar{
