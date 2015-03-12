@@ -36,7 +36,7 @@ require "dbconn.php";
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Time Space</title>
+    <title>Time Slot</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
     <link rel="stylesheet" href="img/font-awesome-4.3.0/css/font-awesome.css">
@@ -74,7 +74,6 @@ require "dbconn.php";
             var auth_direction = data['direction'];
             if(json_data['authUser'] == true)
             {
-              alert("LOGGED IN");
               window.location=json_data['direction'];
             }
             else

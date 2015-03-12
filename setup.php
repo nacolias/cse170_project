@@ -80,7 +80,6 @@ while($row = $userinfo_query_result->fetch_assoc())
         img_directory : $("#img_directory").val(),
        },
       function(data) {
-          alert("Success!");
           console.log(data);
           window.location.replace("index.php");
       });

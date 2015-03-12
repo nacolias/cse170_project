@@ -207,7 +207,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
                 "<div class='row'>
                     <div class='small-centered small-8 columns profilePic'>
                         <center>
-                            <h4>It looks like you aren't in any groups, 
+                            <h4 style='color:white'>It looks like you aren't in any groups, 
                                 <a href='#' id='add_more_groups'>click here to add some</a>
                             </h4>
                         </center>
@@ -221,7 +221,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_current_available
                 "<div class='row'>
                     <div class='small-centered small-8 columns profilePic'>
                         <center>
-                            <h4>Nobody Currently Available</h4>
+                            <h4 style='color:white'>Nobody Currently Available</h4>
                         </center>
                     </div>
                 </div>";
@@ -307,7 +307,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'get_all_group')
             <div class='row'>
                 <div class='small-centered small-8 columns profilePic'>
                     <center>
-                        <h4>Nobody else in group</h4>
+                        <h4 style='color:white'>Nobody else is in this group</h4>
                     </center>
                 </div>
             </div>";
@@ -344,7 +344,7 @@ elseif(isset($_POST['action']) && $_POST['action'] == 'add_more_groups')
         <div class="row">
            <div class="columns small-8 small-centered">
                 <center>
-                    <h4>Click A Group To Add</h4>
+                    <h4 style="color:white">Click A Group To Add</h4>
                 </center>
            </div>
         </div>
